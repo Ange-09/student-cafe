@@ -1,0 +1,149 @@
+/* HEADER CONTAINER STYLES */
+
+.header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 0 10%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* adds subtle glass effect */
+}
+
+/* HEADER TEXT STYLES */
+
+.header-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.header-left-text {
+  font-weight: 700;
+}
+
+.header-line {
+  color: #1a8ccc;
+  font-weight: 500;
+}
+
+/* NAV LINK STYLES */
+
+.navlink {
+  font-size: 0.9rem;
+  color: #b3b2b2;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 115%;
+  height: 0.14rem;
+  background: linear-gradient(90deg, #3abeff, #1a8ccc);
+  border-radius: 2px;
+  transform: scaleX(0) translateX(-50%);
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+
+.navlink:hover::after,
+.navlink.active::after {
+  transform: scaleX(1) translateX(-50%);
+  transform-origin: bottom left;
+}
+
+/* MENU ICON STYLES */
+
+.menu {
+  width: 1.2rem;
+  height: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  align-self: center;
+}
+
+.menu span {
+  height: 0.15rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (min-width: 769px) {
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 50px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 45px;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    left: 80%;
+    width: 15%;
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 1rem 0;
+    gap: 1.5rem;
+    z-index: 1000;
+    border-radius: 15px;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .header-nav.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .menu {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,28 @@
+.herosection {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 88vh;
+
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  background-image: url(../assets/herobg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: beige;
+}
+
+.hero-title {
+  margin-top: 8rem;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description {
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

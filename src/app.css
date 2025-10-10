@@ -1,0 +1,39 @@
+html {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px; /* Default font size for laptop */
+
+  width: 100vw;
+}
+
+/* For smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* Reduce font size for smaller screens like smartphones */
+  }
+}
+
+/* For tablets (max-width: 768px and min-width: 481px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 13px; /* Slightly smaller font size for tablets */
+  }
+}
+
+/* For small laptops or larger tablets (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 15px; /* Keep the default font size for smaller laptops or larger tablets */
+  }
+}
+
+/* For large screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px; /* Larger font size for large screens (desktops) */
+  }
+}
+
+html body {
+  background-color: #0d0d0d;
+}
