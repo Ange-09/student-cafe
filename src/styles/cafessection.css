@@ -1,0 +1,14 @@
+.cafessection {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  background-color: #f4e8d8;
+  color: beige;
+}

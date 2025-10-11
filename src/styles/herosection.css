@@ -2,7 +2,8 @@
   display: flex;
   position: relative;
   width: 100vw;
-  height: 88vh;
+  height: 100vh;
+  flex-direction: column;
 
   justify-content: center;
   align-items: flex-start;
@@ -17,12 +18,21 @@
 }
 
 .hero-title {
-  margin-top: 8rem;
+  margin-top: 2rem;
   font-size: 4rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
 .hero-description {
+  margin-top: 3rem;
   font-size: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+.search-title {
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+  margin-top: 10rem;
+  font-weight: 500;
 }

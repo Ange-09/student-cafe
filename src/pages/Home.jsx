@@ -1,13 +1,13 @@
 import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import SearchSection from "../components/SearchSection";
+import HeroSection from "../sections/HeroSection";
+import CafesSection from "../sections/CafesSection";
 
 function Home() {
   return (
     <>
       <Header />
       <HeroSection />
-      <SearchSection />
+      <CafesSection />
     </>
   );
 }
