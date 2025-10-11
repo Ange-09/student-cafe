@@ -63,7 +63,17 @@ export default function CafeSearch() {
     if (searchRef.current) {
       const rect = searchRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      setPopupDirection(rect.top > windowHeight / 2 ? "up" : "down");
+
+      // Space available above and below the input field
+      const spaceAbove = rect.top;
+      const spaceBelow = windowHeight - rect.bottom;
+
+      // Choose direction based on where there's more space
+      if (spaceAbove > spaceBelow) {
+        setPopupDirection("drop-up");
+      } else {
+        setPopupDirection("drop-down");
+      }
     }
     setShowSuggestions(true);
   };
