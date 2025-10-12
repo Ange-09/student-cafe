@@ -1,0 +1,142 @@
+.amenities-filter {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filter-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.clear-all-btn {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.clear-all-btn:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.amenities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amenity-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #f8f9fa;
+  border: 2px solid transparent;
+}
+
+.amenity-checkbox:hover {
+  background-color: #e9ecef;
+}
+
+.amenity-checkbox.selected {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.amenity-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.amenity-checkbox.selected .checkbox-custom {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.amenity-checkbox.selected .checkbox-custom svg {
+  stroke: white;
+}
+
+.amenity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #666;
+}
+
+.amenity-checkbox.selected .amenity-icon {
+  color: #2196f3;
+}
+
+.amenity-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  user-select: none;
+}
+
+.amenity-checkbox.selected .amenity-label {
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.selected-count {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .amenities-filter {
+    padding: 16px;
+  }
+
+  .filter-header h3 {
+    font-size: 16px;
+  }
+
+  .amenity-checkbox {
+    padding: 8px 10px;
+  }
+
+  .amenity-label {
+    font-size: 13px;
+  }
+}

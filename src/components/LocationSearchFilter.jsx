@@ -6,7 +6,7 @@ import { locations } from "../context/staticData";
 const LocationSearch = () => {
   const [searchText, setSearchText] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
-  const { setSelectedLocation } = useContext(AppContext);
+  const { selectedLocation, setSelectedLocation } = useContext(AppContext);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
 
@@ -22,34 +22,12 @@ const LocationSearch = () => {
     setShowDropdown(true);
   };
 
-  // Handle location selection from dropdown
+  // Handle location selection
   const handleLocationSelect = (location) => {
     setSearchText(location);
+    setSelectedLocation(location);
     setShowDropdown(false);
-  };
-
-  // Handle search button click
-  const handleSearch = () => {
-    if (locations.includes(searchText)) {
-      setSelectedLocation(searchText);
-      console.log("Searching for cafes in:", searchText);
-
-      // Scroll down by one full screen height
-      window.scrollBy({
-        top: window.innerHeight,
-        behavior: "smooth",
-      });
-    } else {
-      alert("Please select a valid location from the dropdown");
-      setSearchText("");
-    }
-  };
-
-  // Handle Enter key press
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
+    console.log("Selected location:", location);
   };
 
   // Close dropdown when clicking outside
@@ -79,24 +57,7 @@ const LocationSearch = () => {
           value={searchText}
           onChange={handleInputChange}
           onFocus={() => setShowDropdown(true)}
-          onKeyPress={handleKeyPress}
         />
-        <button className="search-button" onClick={handleSearch}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-        </button>
       </div>
 
       {showDropdown && filteredLocations.length > 0 && (

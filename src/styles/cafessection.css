@@ -21,6 +21,7 @@
   background-color: rgb(101, 101, 225);
   padding: 30px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .filters {
@@ -29,6 +30,15 @@
   padding: 30px;
   box-sizing: border-box;
   color: black;
+  border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.filters-title {
+  text-align: center;
 }
 
 .main {
