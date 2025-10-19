@@ -22,3 +22,11 @@ export const amenities = [
   "Printing Services",
   "Open 24/7",
 ];
+
+export const CafeName = [
+  "A Sample",
+  "B Sample",
+  "C Sample",
+  "D Sample",
+  "E Sample",
+];

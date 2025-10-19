@@ -8,6 +8,7 @@ export const AppProvider = ({ children }) => {
   // Global States
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedAmenities, setSelectedAmenities] = useState([]);
+  const [selectedCafeName, setSelectedCafeName] = useState("");
 
   // 3️⃣ Return Provider that shares the states and functions
   return (
@@ -17,6 +18,8 @@ export const AppProvider = ({ children }) => {
         setSelectedLocation,
         selectedAmenities,
         setSelectedAmenities,
+        selectedCafeName,
+        setSelectedCafeName,
       }}
     >
       {children}

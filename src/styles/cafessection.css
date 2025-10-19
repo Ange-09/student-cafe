@@ -41,6 +41,14 @@
   text-align: center;
 }
 
+.filters-sub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
 .main {
   grid-area: main;
   background-color: #f4e8d8;
