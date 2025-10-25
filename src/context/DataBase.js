@@ -4,7 +4,8 @@ const dataBase = [
     id: 1,
     name: "The Study Brew",
     location: "Building A, Ground Floor",
-    star: 3.2,
+    locType: "Cafe",
+    star: 2.0,
     amenities: [
       "Free WiFi",
       "Power Outlets",
@@ -19,7 +20,8 @@ const dataBase = [
     id: 2,
     name: "Campus Corner Cafe",
     location: "Library Building, 2nd Floor",
-    star: 4.5,
+    locType: "Lounge",
+    star: 3.0,
     amenities: [
       "Free WiFi",
       "Group Study Rooms",
@@ -35,6 +37,7 @@ const dataBase = [
     id: 3,
     name: "The Green Lounge",
     location: "Student Center, Main Wing",
+    locType: "Co-Working",
     star: 4.0,
     amenities: [
       "Free WiFi",
@@ -51,6 +54,7 @@ const dataBase = [
     id: 4,
     name: "Tech Hub Cafe",
     location: "Engineering Building, Basement",
+    locType: "Cafe",
     star: 3.5,
     amenities: [
       "High-Speed WiFi",
@@ -67,6 +71,7 @@ const dataBase = [
     id: 5,
     name: "Sunset Terrace Cafe",
     location: "Rooftop, Administrative Building",
+    locType: "Cafe",
     star: 4.8,
     amenities: [
       "Free WiFi",

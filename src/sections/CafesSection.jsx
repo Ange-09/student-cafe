@@ -7,6 +7,7 @@ import AmenitiesFilter from "../components/AmenitiesFilter";
 import SearchButton from "../components/SearchButton";
 import NameSearch from "../components/NameSearch";
 import RatingsFilter from "../components/RatingsFilter";
+import TypeFilter from "../components/TypeFilter";
 
 function CafesSection() {
   const { selectedLocation, setSelectedLocation } = useContext(AppContext);
@@ -25,6 +26,8 @@ function CafesSection() {
         <h3 className="filters-sub-title">Location</h3>
         <br />
         <LocationSearchFilter />
+        <TypeFilter />
+        <br />
         <RatingsFilter />
         <br />
         <AmenitiesFilter />
