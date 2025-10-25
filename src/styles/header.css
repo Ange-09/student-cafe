@@ -40,11 +40,13 @@
 /* NAV LINK STYLES */
 
 .navlink {
-  font-size: 0.9rem;
   color: #b3b2b2;
   text-decoration: none;
   position: relative;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
 }
 
 .navlink::after {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Home, BookOpenText, CircleUser } from "lucide-react"; // ✅ Import icons
 import "../styles/header.css";
 
 function Header() {
@@ -24,31 +25,32 @@ function Header() {
         <span></span>
       </div>
 
-      {/* Nav Menu */}
+      {/* Nav Menu with Icons */}
       <nav className={`header-nav ${menuOpen ? "show" : ""}`}>
-        <NavLink to="/" className="navlink" onClick={() => setMenuOpen(false)}>
-          Home
-        </NavLink>
         <NavLink
-          to="/Journey"
+          to="/"
           className="navlink"
           onClick={() => setMenuOpen(false)}
+          title="Home"
         >
-          Journey
+          <Home size={22} />
         </NavLink>
+
         <NavLink
-          to="/Projects"
+          to="/CafePage"
           className="navlink"
           onClick={() => setMenuOpen(false)}
+          title="Cafes"
         >
-          Projects
+          <BookOpenText size={22} />
         </NavLink>
         <NavLink
-          to="/Contact"
+          to="/Account"
           className="navlink"
           onClick={() => setMenuOpen(false)}
+          title="Cafes"
         >
-          Contact
+          <CircleUser size={22} />
         </NavLink>
       </nav>
     </div>
