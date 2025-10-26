@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
 import Home from "./pages/Home";
 import OwnerPage from "./pages/OwnerPage";
