@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
 import Home from "./pages/Home";
-import CafePage from "./pages/CafePage";
+import OwnerPage from "./pages/OwnerPage";
 import "./app.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/CafePage" element={<CafePage />} />
+            <Route path="/OwnerPage" element={<OwnerPage />} />
           </Routes>
         </Router>
       </div>

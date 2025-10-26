@@ -1,6 +1,6 @@
-import "../styles/cafepagesection.css";
+import "../styles/ownerpagesection.css";
 
-function CafePageSection() {
+function OwnerPageSection() {
   return (
     <div className="page-cafe">
       <div className="picture-section"></div>
@@ -13,4 +13,4 @@ function CafePageSection() {
   );
 }
 
-export default CafePageSection;
+export default OwnerPageSection;

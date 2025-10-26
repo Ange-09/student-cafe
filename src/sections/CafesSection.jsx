@@ -9,6 +9,8 @@ import NameSearch from "../components/NameSearch";
 import RatingsFilter from "../components/RatingsFilter";
 import TypeFilter from "../components/TypeFilter";
 
+import CardDisplaySection from "./CardDisplaySection";
+
 function CafesSection() {
   const { selectedLocation, setSelectedLocation } = useContext(AppContext);
 
@@ -33,7 +35,7 @@ function CafesSection() {
         <AmenitiesFilter />
       </div>
       <div className="main">
-        <h3>Main Content</h3>
+        <CardDisplaySection />
       </div>
     </div>
   );
