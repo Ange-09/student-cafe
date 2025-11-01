@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import OwnerPageSection from "../sections/OwnerPageSection";
 
-function OwnerPage() {
+function CafePage() {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ function OwnerPage() {
   );
 }
 
-export default OwnerPage;
+export default CafePage;

@@ -1,6 +1,6 @@
 .page-cafe {
   display: grid;
-  grid-template-rows: 1fr 3fr 6fr;
+  grid-template-rows: 1fr 4fr 6fr;
   grid-template-areas:
     "empty"
     "picture"
@@ -12,7 +12,33 @@
 .picture-section {
   grid-area: picture;
   background-color: rgb(190, 142, 78);
-  padding: 20px;
+  padding: 20px 350px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pic-left pic-top"
+    "pic-left pic-bottom";
+  gap: 20px;
+}
+
+.pic-left {
+  grid-area: pic-left;
+  background-color: rgb(184, 206, 199);
+  border-radius: 30px;
+}
+
+.pic-top {
+  grid-area: pic-top;
+  background-color: rgb(184, 206, 199);
+  border-radius: 30px;
+}
+
+.pic-bottom {
+  grid-area: pic-bottom;
+  background-color: rgb(184, 206, 199);
+  border-radius: 30px;
 }
 
 .cafe-details {
@@ -29,7 +55,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 5rem 10rem;
+  padding: 0rem 10rem;
   box-sizing: border-box;
 
   background-color: #f4e8d8;

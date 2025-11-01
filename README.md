@@ -1,3 +1,5 @@
+  "homepage": "https://https://Ange-09.github.io/student-cafe/",
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

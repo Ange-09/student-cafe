@@ -1,9 +1,19 @@
 import "../styles/ownerpagesection.css";
 
-function OwnerPageSection() {
+function CafePageSection() {
   return (
     <div className="page-cafe">
-      <div className="picture-section"></div>
+      <div className="picture-section">
+        <div className="pic-left">
+          <p>asdfasdf</p>
+        </div>
+        <div className="pic-top">
+          <p>asdfadsf</p>
+        </div>
+        <div className="pic-bottom">
+          <p>asdfadsf</p>
+        </div>
+      </div>
       <div className="cafe-details">
         <div className="title-box"></div>
         <div className="left-box"></div>
@@ -13,4 +23,4 @@ function OwnerPageSection() {
   );
 }
 
-export default OwnerPageSection;
+export default CafePageSection;

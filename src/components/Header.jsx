@@ -45,10 +45,10 @@ function Header() {
           <BookOpenText size={22} />
         </NavLink>
         <NavLink
-          to="/Account"
+          to="/OwnerPage"
           className="navlink"
           onClick={() => setMenuOpen(false)}
-          title="Cafes"
+          title="OwnerPage"
         >
           <CircleUser size={22} />
         </NavLink>
