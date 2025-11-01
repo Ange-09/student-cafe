@@ -1,15 +1,12 @@
 export const locations = [
-  "Makati City",
-  "City of Manila",
-  "Quezon City",
-  "Las Piñas City",
-  "Parañaque City",
-  "Pasay City",
-  "Taguig City",
-  "Pasig City",
-  "Caloocan",
-  "Mandaluyong",
-  "Muntinlupa",
+  "Sampaloc",
+  "Ermita",
+  "Malate",
+  "Intramuros",
+  "Quiapo",
+  "Santa Cruz",
+  "Santa Mesa",
+  "San Miguel",
 ];
 
 export const amenities = [

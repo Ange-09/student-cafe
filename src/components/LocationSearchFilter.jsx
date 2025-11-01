@@ -46,6 +46,13 @@ const LocationSearch = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Clears the text when filter is cleared
+  useEffect(() => {
+    if (!selectedLocation) {
+      setSearchText("");
+    }
+  }, [selectedLocation]);
+
   return (
     <div className="location-search-container">
       <div className="search-wrapper">

@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
   const [selectedAmenities, setSelectedAmenities] = useState([]); //Cafe Amenities
   const [selectedCafeName, setSelectedCafeName] = useState(""); //Name of Cafe
   const [selectedRating, setSelectedRating] = useState(null); // Cafe Rating
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState(null); // Type of Cafe
 
   // 🔥 Filter Function
   const filterCafes = (cafes) => {

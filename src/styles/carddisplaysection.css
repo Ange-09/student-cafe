@@ -350,3 +350,79 @@
     transform: translateY(0);
   }
 }
+
+.active-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.location-badge {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.rating-badge {
+  border: 2px solid #ffc107;
+  color: #f57c00;
+}
+
+.clear-badge-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.clear-badge-btn:hover {
+  opacity: 1;
+}
+
+.clear-all-filters-btn {
+  padding: 8px 16px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.clear-all-filters-btn:hover {
+  background: #c82333;
+}
+
+.results-count {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}

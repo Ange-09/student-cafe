@@ -16,13 +16,10 @@ function CafesSection() {
 
   return (
     <div className="cafessection">
-      <div className="cafe-header">
-        <h1>Student Cafes/Lounges at {selectedLocation}</h1>
-      </div>
       <div className="filters">
         <SearchButton />
         <br />
-        <h3 className="filters-sub-title">Cafe/Lounge Name</h3>
+        <h3 className="filters-sub-title">Name</h3>
         <br />
         <NameSearch />
         <h3 className="filters-sub-title">Location</h3>

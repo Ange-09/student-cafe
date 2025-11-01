@@ -7,7 +7,7 @@ const RatingsFilter = () => {
 
   const handleSliderChange = (e) => {
     const value = parseFloat(e.target.value);
-    setSelectedRating(value);
+    setSelectedRating(value === 0 ? null : value);
     console.log("Selected rating:", value);
   };
 
@@ -91,7 +91,9 @@ const RatingsFilter = () => {
           className="rating-slider"
         />
         <span className="rating-value">
-          {selectedRating ? selectedRating.toFixed(1) : "0.0"}
+          {selectedRating && selectedRating > 0
+            ? selectedRating.toFixed(1)
+            : ""}
         </span>
       </div>
     </div>

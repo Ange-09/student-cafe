@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 4fr;
   grid-template-areas:
-    "cafe-header cafe-header"
+    "filters main"
     "filters main";
 
   position: relative;
