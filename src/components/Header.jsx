@@ -28,7 +28,7 @@ function Header() {
       {/* Nav Menu with Icons */}
       <nav className={`header-nav ${menuOpen ? "show" : ""}`}>
         <NavLink
-          to="/"
+          to="/Home"
           className="navlink"
           onClick={() => setMenuOpen(false)}
           title="Home"
