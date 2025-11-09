@@ -8,7 +8,7 @@ import SearchButton from "../components/SearchButton";
 import NameSearch from "../components/NameSearch";
 import RatingsFilter from "../components/RatingsFilter";
 import TypeFilter from "../components/TypeFilter";
-
+import PriceFilter from "../components/PriceFilter";
 import CardDisplaySection from "./CardDisplaySection";
 
 function CafesSection() {
@@ -17,7 +17,6 @@ function CafesSection() {
   return (
     <div className="cafessection">
       <div className="filters">
-        <SearchButton />
         <br />
         <h3 className="filters-sub-title">Name</h3>
         <br />
@@ -28,6 +27,8 @@ function CafesSection() {
         <TypeFilter />
         <br />
         <RatingsFilter />
+        <br />
+        <PriceFilter />
         <br />
         <AmenitiesFilter />
       </div>

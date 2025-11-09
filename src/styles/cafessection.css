@@ -26,11 +26,10 @@
 
 .filters {
   grid-area: filters;
-  background-color: #f4e8d8;
+  background-color: #f7e5cf;
   padding: 30px;
   box-sizing: border-box;
   color: black;
-  border: 2px solid black;
 
   display: flex;
   flex-direction: column;

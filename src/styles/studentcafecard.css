@@ -199,3 +199,21 @@
   background: #f1f1f1;
   border-radius: 10px;
 }
+
+/* PRICE STYLES */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.price-display {
+  display: flex;
+  align-items: start;
+}
+
+.price-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d8548;
+}
