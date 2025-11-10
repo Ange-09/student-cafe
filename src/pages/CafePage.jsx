@@ -1,11 +1,11 @@
 import Header from "../components/Header";
-import OwnerPageSection from "../sections/OwnerPageSection";
+import CafePageSection from "../sections/CafePageSection";
 
 function CafePage() {
   return (
     <>
       <Header />
-      <OwnerPageSection />
+      <CafePageSection />
     </>
   );
 }

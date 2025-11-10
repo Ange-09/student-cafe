@@ -8,53 +8,49 @@ function CardDisplaySection() {
   const [currentPage, setCurrentPage] = useState(0);
   const {
     selectedLocation,
-    setSelectedLocation,
     selectedRating,
+    selectedPrice,
+    selectedAmenities,
+    selectedType,
+    selectedCafeName,
+    filterCafes,
+    hasActiveFilters,
+    clearAllFilters,
+    setSelectedLocation,
     setSelectedRating,
+    setSelectedPrice,
+    setSelectedAmenities,
+    setSelectedType,
+    setSelectedCafeName,
   } = useContext(AppContext);
+
   const cardsPerPage = 9;
 
   // Reset to first page when filters change
   useEffect(() => {
     setCurrentPage(0);
-  }, [selectedLocation, selectedRating]);
+  }, [
+    selectedLocation,
+    selectedRating,
+    selectedPrice,
+    selectedAmenities,
+    selectedType,
+    selectedCafeName,
+  ]);
 
   // Add safety check AFTER all hooks
   if (!dataBase || dataBase.length === 0) {
     return <div className="no-cafes">No cafes available</div>;
   }
 
-  // Filter cafes based on selected location AND rating
-  let filteredCafes = dataBase;
-
-  // Apply location filter
-  if (selectedLocation) {
-    filteredCafes = filteredCafes.filter((cafe) =>
-      cafe.location.toLowerCase().includes(selectedLocation.toLowerCase())
-    );
-  }
-
-  // Apply rating filter (using 'star' property from database)
-  if (selectedRating && selectedRating > 0) {
-    filteredCafes = filteredCafes.filter((cafe) => {
-      // Handle both 'star' and 'rating' property names for compatibility
-      const cafeRating = cafe.star || cafe.rating || 0;
-      return cafeRating >= selectedRating;
-    });
-  }
+  // Use the filterCafes function from context
+  const filteredCafes = filterCafes(dataBase);
 
   // Calculate pagination with filtered data
   const totalPages = Math.ceil(filteredCafes.length / cardsPerPage);
   const startIndex = currentPage * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
   const currentCafes = filteredCafes.slice(startIndex, endIndex);
-
-  // Clear all filters function
-  const handleClearAllFilters = () => {
-    setSelectedLocation("");
-    setSelectedRating(null);
-    setCurrentPage(0);
-  };
 
   // Clear location filter only
   const handleClearLocationFilter = () => {
@@ -68,15 +64,60 @@ function CardDisplaySection() {
     setCurrentPage(0);
   };
 
-  // Check if any filters are active
-  const hasActiveFilters =
-    selectedLocation || (selectedRating && selectedRating > 0);
+  // Clear price filter only
+  const handleClearPriceFilter = () => {
+    setSelectedPrice(null);
+    setCurrentPage(0);
+  };
+
+  // Clear amenities filter only
+  const handleClearAmenitiesFilter = () => {
+    setSelectedAmenities([]);
+    setCurrentPage(0);
+  };
+
+  // Clear type filter only
+  const handleClearTypeFilter = () => {
+    setSelectedType(null);
+    setCurrentPage(0);
+  };
+
+  // Clear cafe name filter only
+  const handleClearCafeNameFilter = () => {
+    setSelectedCafeName("");
+    setCurrentPage(0);
+  };
+
+  // Clear all filters function
+  const handleClearAllFilters = () => {
+    clearAllFilters();
+    setCurrentPage(0);
+  };
+
+  // Get price label for display
+  const getPriceLabel = (priceLevel) => {
+    switch (priceLevel) {
+      case 1:
+        return "₱ (≤150)";
+      case 2:
+        return "₱₱ (151-250)";
+      case 3:
+        return "₱₱₱ (≥251)";
+      default:
+        return "";
+    }
+  };
 
   // Show message if no cafes found with current filters
   if (filteredCafes.length === 0) {
     return (
       <div className="no-cafes">
         <p>No cafes found with the current filters.</p>
+        {selectedCafeName && (
+          <p>
+            Cafe Name: <strong>{selectedCafeName}</strong>
+          </p>
+        )}
         {selectedLocation && (
           <p>
             Location: <strong>{selectedLocation}</strong>
@@ -85,6 +126,21 @@ function CardDisplaySection() {
         {selectedRating > 0 && (
           <p>
             Minimum Rating: <strong>{selectedRating.toFixed(1)} stars</strong>
+          </p>
+        )}
+        {selectedPrice && (
+          <p>
+            Price Range: <strong>{getPriceLabel(selectedPrice)}</strong>
+          </p>
+        )}
+        {selectedType && (
+          <p>
+            Type: <strong>{selectedType}</strong>
+          </p>
+        )}
+        {selectedAmenities.length > 0 && (
+          <p>
+            Amenities: <strong>{selectedAmenities.join(", ")}</strong>
           </p>
         )}
         <button
@@ -123,6 +179,18 @@ function CardDisplaySection() {
       {hasActiveFilters && (
         <div className="active-filters">
           <div className="filter-badges">
+            {selectedCafeName && (
+              <div className="filter-badge cafename-badge">
+                <span>🔍 {selectedCafeName}</span>
+                <button
+                  className="clear-badge-btn"
+                  onClick={handleClearCafeNameFilter}
+                  title="Clear cafe name filter"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
             {selectedLocation && (
               <div className="filter-badge location-badge">
                 <span>📍 {selectedLocation}</span>
@@ -142,6 +210,42 @@ function CardDisplaySection() {
                   className="clear-badge-btn"
                   onClick={handleClearRatingFilter}
                   title="Clear rating filter"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+            {selectedPrice && (
+              <div className="filter-badge price-badge">
+                <span>💰 {getPriceLabel(selectedPrice)}</span>
+                <button
+                  className="clear-badge-btn"
+                  onClick={handleClearPriceFilter}
+                  title="Clear price filter"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+            {selectedType && (
+              <div className="filter-badge type-badge">
+                <span>🏢 {selectedType}</span>
+                <button
+                  className="clear-badge-btn"
+                  onClick={handleClearTypeFilter}
+                  title="Clear type filter"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+            {selectedAmenities.length > 0 && (
+              <div className="filter-badge amenities-badge">
+                <span>✨ {selectedAmenities.length} amenities</span>
+                <button
+                  className="clear-badge-btn"
+                  onClick={handleClearAmenitiesFilter}
+                  title="Clear amenities filter"
                 >
                   ✕
                 </button>

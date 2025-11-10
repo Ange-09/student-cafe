@@ -76,8 +76,8 @@
   height: 14px;
 }
 
-/* Type Badge - Top Right */
-.type-badge {
+/* Type Badge on Card - Top Right */
+.cafe-image-container .type-badge {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -135,11 +135,19 @@
   flex-shrink: 0;
 }
 
+/* Info Row - Contains Rating and Price */
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
 .rating-display {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 12px;
 }
 
 .rating-star {
@@ -151,6 +159,22 @@
   font-weight: 600;
   color: #ffa000;
   margin-left: 4px;
+}
+
+/* Price Display */
+.price-display {
+  display: flex;
+  align-items: center;
+  background: #f0f8ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #4a90e2;
+}
+
+.price-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a90e2;
 }
 
 .amenities-section {
@@ -351,6 +375,7 @@
   }
 }
 
+/* Active Filters Section */
 .active-filters {
   display: flex;
   justify-content: space-between;
@@ -378,6 +403,19 @@
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-badge:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Individual Filter Badge Styles */
+.cafename-badge {
+  border: 2px solid #9c27b0;
+  color: #9c27b0;
 }
 
 .location-badge {
@@ -390,6 +428,31 @@
   color: #f57c00;
 }
 
+.price-badge {
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+/* Type Filter Badge in Active Filters Section */
+.filter-badge.type-badge {
+  position: relative;
+  top: auto;
+  right: auto;
+  background: white;
+  backdrop-filter: none;
+  border: 2px solid #6f42c1;
+  color: #6f42c1;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.amenities-badge {
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
+}
+
 .clear-badge-btn {
   background: none;
   border: none;
@@ -399,10 +462,17 @@
   color: inherit;
   opacity: 0.7;
   transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 }
 
 .clear-badge-btn:hover {
   opacity: 1;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .clear-all-filters-btn {
@@ -413,11 +483,19 @@
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.2s;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
 }
 
 .clear-all-filters-btn:hover {
   background: #c82333;
+  box-shadow: 0 3px 8px rgba(220, 53, 69, 0.3);
+  transform: translateY(-1px);
+}
+
+.clear-all-filters-btn:active {
+  transform: translateY(0);
 }
 
 .results-count {
@@ -425,4 +503,20 @@
   font-size: 14px;
   color: #666;
   font-weight: 500;
+}
+
+/* Responsive adjustments for active filters */
+@media (max-width: 768px) {
+  .active-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-badges {
+    justify-content: center;
+  }
+
+  .clear-all-filters-btn {
+    width: 100%;
+  }
 }

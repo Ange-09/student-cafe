@@ -11,6 +11,7 @@ export const AppProvider = ({ children }) => {
   const [selectedCafeName, setSelectedCafeName] = useState(""); //Name of Cafe
   const [selectedRating, setSelectedRating] = useState(null); // Cafe Rating
   const [selectedType, setSelectedType] = useState(null); // Type of Cafe
+  const [selectedPrice, setSelectedPrice] = useState(null); // Price Range (1, 2, or 3)
 
   // 🔥 Filter Function
   const filterCafes = (cafes) => {
@@ -36,13 +37,31 @@ export const AppProvider = ({ children }) => {
         selectedAmenities.length === 0 ||
         selectedAmenities.every((amenity) => cafe.amenities.includes(amenity));
 
+      // Filter by price range
+      const matchesPrice =
+        !selectedPrice ||
+        (() => {
+          const price = cafe.price || 0;
+          switch (selectedPrice) {
+            case 1: // ₱ - Budget (≤150)
+              return price <= 150;
+            case 2: // ₱₱ - Moderate (151-250)
+              return price >= 151 && price <= 250;
+            case 3: // ₱₱₱ - Premium (≥251)
+              return price >= 251;
+            default:
+              return true;
+          }
+        })();
+
       // Return true only if ALL filters match
       return (
         matchesLocation &&
         matchesName &&
         matchesRating &&
         matchesType &&
-        matchesAmenities
+        matchesAmenities &&
+        matchesPrice
       );
     });
   };
@@ -54,7 +73,8 @@ export const AppProvider = ({ children }) => {
       selectedCafeName ||
       selectedRating ||
       selectedType ||
-      selectedAmenities.length > 0
+      selectedAmenities.length > 0 ||
+      selectedPrice
     );
   }, [
     selectedLocation,
@@ -62,6 +82,7 @@ export const AppProvider = ({ children }) => {
     selectedRating,
     selectedType,
     selectedAmenities,
+    selectedPrice,
   ]);
 
   // 🔥 Clear all filters
@@ -71,6 +92,7 @@ export const AppProvider = ({ children }) => {
     setSelectedRating(null);
     setSelectedType(null);
     setSelectedAmenities([]);
+    setSelectedPrice(null);
     console.log("All filters cleared");
   };
 
@@ -88,6 +110,8 @@ export const AppProvider = ({ children }) => {
         setSelectedRating,
         selectedType,
         setSelectedType,
+        selectedPrice,
+        setSelectedPrice,
         filterCafes, // 🔥 Add filter function
         hasActiveFilters, // 🔥 Add active filters check
         clearAllFilters, // 🔥 Add clear all function

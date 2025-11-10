@@ -4,7 +4,7 @@ import "./app.css";
 
 import LoginPage from "./pages/LoginPage";
 import Home from "./pages/Home";
-import CafePage from "./pages/OwnerPage";
+import CafePage from "./pages/CafePage";
 
 function App() {
   return (
