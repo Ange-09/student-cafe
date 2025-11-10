@@ -13,6 +13,9 @@ export const AppProvider = ({ children }) => {
   const [selectedType, setSelectedType] = useState(null); // Type of Cafe
   const [selectedPrice, setSelectedPrice] = useState(null); // Price Range (1, 2, or 3)
 
+  // 🔥 NEW: Selected cafe for detail page
+  const [selectedCafe, setSelectedCafe] = useState(null);
+
   // 🔥 Filter Function
   const filterCafes = (cafes) => {
     return cafes.filter((cafe) => {
@@ -112,9 +115,11 @@ export const AppProvider = ({ children }) => {
         setSelectedType,
         selectedPrice,
         setSelectedPrice,
-        filterCafes, // 🔥 Add filter function
-        hasActiveFilters, // 🔥 Add active filters check
-        clearAllFilters, // 🔥 Add clear all function
+        selectedCafe, // 🔥 NEW
+        setSelectedCafe, // 🔥 NEW
+        filterCafes,
+        hasActiveFilters,
+        clearAllFilters,
       }}
     >
       {children}

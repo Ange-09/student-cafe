@@ -334,12 +334,12 @@ function CafePageSection({ cafe }) {
           </div>
 
           <div className="comments">
-            <h3 className="comments-title">Student Comments</h3>
+            <h3 className="comments-title">Comments</h3>
             <div className="comments-list">
               <div className="comment-item">
                 <div className="comment-header">
                   <span className="commenter-name">Anonymous Student</span>
-                  <div className="comment-rating">{renderStars(5)}</div>
+                  <div className="comment-rating">{renderStars(4.5)}</div>
                 </div>
                 <p className="comment-text">
                   Great place to study! Very quiet and comfortable seats.

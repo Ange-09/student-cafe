@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // 🔥 NEW
 import StudentCafeCard from "../components/StudentCafeCard";
 import { dataBase } from "../context/DataBase";
 import { AppContext } from "../context/AppContext";
@@ -6,6 +7,8 @@ import "../styles/carddisplaysection.css";
 
 function CardDisplaySection() {
   const [currentPage, setCurrentPage] = useState(0);
+  const navigate = useNavigate(); // 🔥 NEW
+
   const {
     selectedLocation,
     selectedRating,
@@ -13,6 +16,7 @@ function CardDisplaySection() {
     selectedAmenities,
     selectedType,
     selectedCafeName,
+    setSelectedCafe, // 🔥 NEW
     filterCafes,
     hasActiveFilters,
     clearAllFilters,
@@ -51,6 +55,12 @@ function CardDisplaySection() {
   const startIndex = currentPage * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
   const currentCafes = filteredCafes.slice(startIndex, endIndex);
+
+  // 🔥 NEW: Handle card click and navigate to cafe page
+  const handleCardClick = (cafe) => {
+    setSelectedCafe(cafe);
+    navigate(`/cafe/${cafe.id}`);
+  };
 
   // Clear location filter only
   const handleClearLocationFilter = () => {
@@ -266,9 +276,7 @@ function CardDisplaySection() {
           <StudentCafeCard
             key={cafe.id}
             cafe={cafe}
-            onCardClick={(selectedCafe) => {
-              console.log("Clicked:", selectedCafe.name);
-            }}
+            onCardClick={handleCardClick}
             onLocationClick={(location, name) => {
               console.log("Location clicked:", location, name);
             }}
