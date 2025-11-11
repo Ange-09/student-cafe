@@ -1,10 +1,11 @@
 import Header from "../components/Header";
-import ChatWidget from "../components/ChatWidget";
+import ChatWidgetInbox from "../components/ChatWidgetInbox";
 
 function OwnerPage() {
   return (
     <div>
       <Header />
+      <ChatWidgetInbox />
     </div>
   );
 }
