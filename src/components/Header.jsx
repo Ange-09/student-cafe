@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Home, BookOpenText, CircleUser } from "lucide-react"; // ✅ Import icons
+import { Home, CircleUser } from "lucide-react"; // ✅ Removed BookOpenText import
 import "../styles/header.css";
 
 function Header() {
@@ -36,14 +36,6 @@ function Header() {
           <Home size={22} />
         </NavLink>
 
-        <NavLink
-          to="/CafePage"
-          className="navlink"
-          onClick={() => setMenuOpen(false)}
-          title="Cafes"
-        >
-          <BookOpenText size={22} />
-        </NavLink>
         <NavLink
           to="/OwnerPage"
           className="navlink"

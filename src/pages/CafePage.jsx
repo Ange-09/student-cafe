@@ -29,7 +29,6 @@ function CafePage() {
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      <Header />
       {/* Cafe details section */}
       <CafePageSection cafe={selectedCafe} />
     </div>
