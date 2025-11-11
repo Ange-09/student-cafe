@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Home, CircleUser } from "lucide-react"; // ✅ Removed BookOpenText import
+import { Home, CircleUser } from "lucide-react";
 import "../styles/header.css";
 
 function Header() {

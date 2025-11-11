@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { dataBase } from "../context/DataBase";
 import CafePageSection from "../sections/CafePageSection";
-import Header from "../components/Header";
+import ChatWidget from "../components/ChatWidget";
 
 function CafePage() {
   const { id } = useParams(); // Get cafe ID from URL
@@ -31,6 +31,7 @@ function CafePage() {
     <div style={{ minHeight: "100vh" }}>
       {/* Cafe details section */}
       <CafePageSection cafe={selectedCafe} />
+      <ChatWidget />
     </div>
   );
 }
