@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/student-cafe/static/css/main.9e008e70.css",
-    "main.js": "/student-cafe/static/js/main.1045780b.js",
+    "main.css": "/student-cafe/static/css/main.fc908ce2.css",
+    "main.js": "/student-cafe/static/js/main.84c5cbe0.js",
     "static/media/herobg.jpg": "/student-cafe/static/media/herobg.8c632a035607f06bac29.jpg",
     "index.html": "/student-cafe/index.html",
-    "main.9e008e70.css.map": "/student-cafe/static/css/main.9e008e70.css.map",
-    "main.1045780b.js.map": "/student-cafe/static/js/main.1045780b.js.map"
+    "main.fc908ce2.css.map": "/student-cafe/static/css/main.fc908ce2.css.map",
+    "main.84c5cbe0.js.map": "/student-cafe/static/js/main.84c5cbe0.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e008e70.css",
-    "static/js/main.1045780b.js"
+    "static/css/main.fc908ce2.css",
+    "static/js/main.84c5cbe0.js"
   ]
 }
