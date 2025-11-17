@@ -70,6 +70,13 @@ const StudentCafeCard = ({ cafe, onCardClick, onLocationClick }) => {
     }
   };
 
+  const getSeatClass = () => {
+    const seats = cafe.availableSeats || 0;
+    if (seats >= 9) return "seats-green";
+    if (seats >= 4) return "seats-yellow";
+    return "seats-red";
+  };
+
   // Render stars
   const renderStars = (rating) => {
     const stars = [];
@@ -142,7 +149,7 @@ const StudentCafeCard = ({ cafe, onCardClick, onLocationClick }) => {
     <div className="student-cafe-card" onClick={handleCardClick}>
       <div className="cafe-image-container">
         <img src={cafe.image} alt={cafe.name} className="cafe-image" />
-        <div className="seats-badge">
+        <div className={`seats-badge ${getSeatClass()}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"

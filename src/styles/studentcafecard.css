@@ -217,3 +217,17 @@
   font-weight: 500;
   color: #1d8548;
 }
+
+/* SEAT BADGE COLORS */
+
+.seats-green {
+  background: rgba(46, 204, 113, 0.9) !important;
+}
+
+.seats-yellow {
+  background: rgba(241, 196, 15, 0.9) !important;
+}
+
+.seats-red {
+  background: rgba(231, 76, 60, 0.9) !important;
+}
