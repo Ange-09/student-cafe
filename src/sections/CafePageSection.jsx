@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/cafepagesection.css";
+import ReserveButton from "../components/ReserveButton";
 
 function CafePageSection({ cafe }) {
   // If no cafe data is provided, show a message
@@ -167,19 +168,25 @@ function CafePageSection({ cafe }) {
     <div className="page-cafe">
       <div className="picture-section">
         <div className="pic-left">
-          <img src={cafe.image} alt={cafe.name} className="cafe-main-image" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${cafe.id}a.jpg`}
+            alt={`${cafe.name} left`}
+            className="cafe-main-image"
+          />
         </div>
+
         <div className="pic-top">
           <img
-            src={cafe.image}
-            alt={`${cafe.name} view 1`}
+            src={`${process.env.PUBLIC_URL}/images/${cafe.id}b.jpg`}
+            alt={`${cafe.name} top`}
             className="cafe-side-image"
           />
         </div>
+
         <div className="pic-bottom">
           <img
-            src={cafe.image}
-            alt={`${cafe.name} view 2`}
+            src={`${process.env.PUBLIC_URL}/images/${cafe.id}c.jpg`}
+            alt={`${cafe.name} bottom`}
             className="cafe-side-image"
           />
         </div>
@@ -187,19 +194,25 @@ function CafePageSection({ cafe }) {
 
       <div className="cafe-details">
         <div className="title-box">
-          <h1 className="cafe-title">{cafe.name}</h1>
-          <div className="title-meta">
-            <span className="cafe-type-badge">{cafe.locType}</span>
-            <div className="title-rating">
-              {renderStars(cafe.star)}
-              <span className="rating-number">{cafe.star.toFixed(1)}</span>
-            </div>
-            {cafe.price && (
-              <div className="price-tag">
-                <span>Starting from </span>
-                <span className="price-amount">₱{cafe.price}</span>
+          <div className="title-box-left">
+            <h1 className="cafe-title">{cafe.name}</h1>
+            <div className="title-meta">
+              <span className="cafe-type-badge">{cafe.locType}</span>
+              <div className="title-rating">
+                {renderStars(cafe.star)}
+                <span className="rating-number">{cafe.star.toFixed(1)}</span>
               </div>
-            )}
+              {cafe.price && (
+                <div className="price-tag">
+                  <span>Starting from </span>
+                  <span className="price-amount">₱{cafe.price}</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="title-box-right">
+            <ReserveButton />
           </div>
         </div>
 

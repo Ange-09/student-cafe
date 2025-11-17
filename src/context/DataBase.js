@@ -98,7 +98,7 @@ export const dataBase = [
     operatingHours: "24/7",
     peakTime: "",
     price: 300,
-    amenities: ["Free Wifi", "Conference Rooms"],
+    amenities: ["Free Wifi", "Conference Rooms", "Open 24/7"],
   },
   {
     id: 7,
@@ -174,10 +174,15 @@ export const dataBase = [
     star: 4.5,
     image: "/images/12.jpg",
     googleMaps: "https://maps.app.goo.gl/mcbVm3U1kgb4MW4u9",
-    operatingHours: "10am - 1am",
+    operatingHours: "24/7",
     peakTime: "6pm - 9pm",
     price: 200,
-    amenities: ["Free Wifi", "Food Options Available", "Parking Space"],
+    amenities: [
+      "Free Wifi",
+      "Food Options Available",
+      "Parking Space",
+      "Open 24/7",
+    ],
   },
   {
     id: 13,

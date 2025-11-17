@@ -1,6 +1,5 @@
 .page-cafe {
   display: grid;
-  grid-template-rows: 1fr 4fr 6fr;
   grid-template-areas:
     "empty"
     "picture"
@@ -10,8 +9,8 @@
 
 .picture-section {
   grid-area: picture;
-  background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
-  padding: 20px 350px;
+  background-color: #eee6de;
+  padding: 20px 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -19,6 +18,7 @@
     "pic-left pic-top"
     "pic-left pic-bottom";
   gap: 20px;
+  height: 75vh;
 }
 
 .pic-left,
@@ -34,6 +34,18 @@
 .pic-top:hover,
 .pic-bottom:hover {
   transform: scale(1.02);
+}
+
+.pic-left {
+  grid-area: pic-left;
+}
+
+.pic-top {
+  grid-area: pic-top;
+}
+
+.pic-bottom {
+  grid-area: pic-bottom;
 }
 
 .cafe-main-image,
@@ -54,9 +66,9 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0rem 10rem;
+  padding: 1rem 10rem;
   box-sizing: border-box;
-  background-color: #f9f5f0;
+  background-color: rgb(255, 255, 255);
 }
 
 .title-box {
@@ -64,6 +76,19 @@
   background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
   padding: 30px 40px;
   border-bottom: 3px solid #d4a574;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.title-box-left {
+  width: 70%;
+}
+
+.title-box-right {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
 }
 
 .cafe-title {
@@ -445,4 +470,7 @@
   .amenities-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.reservebutton {
 }

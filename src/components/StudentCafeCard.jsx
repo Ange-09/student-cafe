@@ -148,7 +148,11 @@ const StudentCafeCard = ({ cafe, onCardClick, onLocationClick }) => {
   return (
     <div className="student-cafe-card" onClick={handleCardClick}>
       <div className="cafe-image-container">
-        <img src={cafe.image} alt={cafe.name} className="cafe-image" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/${cafe.id}a.jpg`}
+          alt={cafe.name}
+          className="cafe-image"
+        />
         <div className={`seats-badge ${getSeatClass()}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

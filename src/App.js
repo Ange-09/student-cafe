@@ -6,12 +6,14 @@ import LoginPage from "./pages/LoginPage";
 import Home from "./pages/Home";
 import CafePage from "./pages/CafePage";
 import OwnerPage from "./pages/OwnerPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <AppProvider>
       <div className="App">
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/Home" element={<Home />} />

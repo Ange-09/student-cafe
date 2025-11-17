@@ -18,9 +18,6 @@ function CafesSection() {
     <div className="cafessection">
       <div className="filters">
         <br />
-        <h3 className="filters-sub-title">Name</h3>
-        <br />
-        <NameSearch />
         <h3 className="filters-sub-title">Location</h3>
         <br />
         <LocationSearchFilter />
