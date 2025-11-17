@@ -168,7 +168,7 @@ export default function ReserveButton() {
                 </p>
               </div>
 
-              <button onClick={handleQRNext} className="next-btn">
+              <button onClick={handleQRNext} className="next-btn-rsv">
                 Next
               </button>
             </div>

@@ -141,7 +141,7 @@
 
 /* Buttons */
 .submit-btn,
-.next-btn {
+.next-btn-rsv {
   width: 100%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -156,7 +156,7 @@
 }
 
 .submit-btn:hover,
-.next-btn:hover {
+.next-btn-rsv:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
