@@ -32,7 +32,7 @@ export const dataBase = [
     image: "/images/2.jpg",
     googleMaps: "https://maps.app.goo.gl/yfdnTFjCWeiAx7jq5",
     mapsIframe:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15446.432223201338!2d120.9946749!3d14.5643921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9001f2afdaf%3A0x37fb036b46dae7e3!2sCloudscape%20Study%20Hub!5e0!3m2!1sen!2sph!4v1762768096499!5m2!1sen!2sph",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5913391829804!2d120.99473449999999!3d14.5653467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c952384927af%3A0x4bd17e6184b56c5e!2sDrip%20Kofi%20DLSU!5e0!3m2!1sen!2sph!4v1763193818774!5m2!1sen!2sph",
     operatingHours: "8am - 12am",
     peakTime: "6pm - 9pm",
     price: 150,
@@ -48,7 +48,7 @@ export const dataBase = [
     image: "/images/3.jpg",
     googleMaps: "https://maps.app.goo.gl/AtiE5qbbVBvoSJHd8",
     mapsIframe:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15446.432223201338!2d120.9946749!3d14.5643921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9001f2afdaf%3A0x37fb036b46dae7e3!2sCloudscape%20Study%20Hub!5e0!3m2!1sen!2sph!4v1762768096499!5m2!1sen!2sph",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.657663484152!2d120.9953576!3d14.561558900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9bd3a2de0bd%3A0x627fc974a517d54b!2sU%20ME%20KAPE!5e0!3m2!1sen!2sph!4v1763194042354!5m2!1sen!2sph",
     operatingHours: "8am - 2am",
     peakTime: "6pm - 9pm",
     price: 200,
@@ -63,6 +63,8 @@ export const dataBase = [
     availableSeats: 2,
     image: "/images/4.jpg",
     googleMaps: "https://maps.app.goo.gl/1jyWP1eLggLhXXec6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.4922222692394!2d120.98781169999998!3d14.5710055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c92882f0fd71%3A0x8010bfe1884d9f8!2sObscure%20Caf%C3%A9%20-%20Malate!5e0!3m2!1sen!2sph!4v1763194264488!5m2!1sen!2sph",
     operatingHours: "10am - 1am",
     peakTime: "6pm - 9pm",
     price: 200,
@@ -70,13 +72,16 @@ export const dataBase = [
   },
   {
     id: 5,
-    name: "Coffee Project co-lab",
+    name: "Coffee Project Co-lab",
     location: "Malate",
     locType: "Study Cafe",
     star: 4.4,
     availableSeats: 20,
     image: "/images/5.jpg",
     googleMaps: "https://maps.app.goo.gl/H2KWgCJ1o2C9Vge58",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6324686112735!2d120.99479869999998!3d14.562997899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97942745589%3A0xbadf6eea6e9b4624!2sCoffee%20Project%20co-lab!5e0!3m2!1sen!2sph!4v1763297992550!5m2!1sen!2sph",
+
     operatingHours: "7am - 12:30am",
     peakTime: "6pm - 9pm",
     price: 200,
@@ -95,6 +100,9 @@ export const dataBase = [
     star: 5.0,
     image: "/images/6.jpg",
     googleMaps: "https://maps.app.goo.gl/eNKnFZ2wCJMBBnBL7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30891.862067258462!2d120.9503424!3d14.5715457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb686a8d2cf5%3A0xcc24daa516efc23d!2sRegus%20Adriatico%20Square!5e0!3m2!1sen!2sph!4v1763298441307!5m2!1sen!2sph",
+
     operatingHours: "24/7",
     peakTime: "",
     price: 300,
@@ -108,6 +116,9 @@ export const dataBase = [
     star: 4.6,
     image: "/images/7.jpg",
     googleMaps: "https://maps.app.goo.gl/Gk2MWbPmkSzB1JAX9",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30891.862067258462!2d120.9503424!3d14.5715457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9325b4be98d%3A0xf176a51ca9c53e5a!2sCoSphere%20Co%20Working%20Space!5e0!3m2!1sen!2sph!4v1763299075026!5m2!1sen!2sph",
+
     operatingHours: "9am - 6pm",
     peakTime: "4pm - 6pm",
     price: 300,
@@ -122,6 +133,9 @@ export const dataBase = [
     availableSeats: 16,
     image: "/images/8.jpg",
     googleMaps: "https://maps.app.goo.gl/oubfXTQCMTt6eA9c7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d61782.520918188085!2d120.9077211!3d14.5758375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb0067dbd291%3A0x9d5449d9b5f6562!2sCandid%20Coffee%20Ermita!5e0!3m2!1sen!2sph!4v1763299371902!5m2!1sen!2sph",
+
     operatingHours: "8am - 9pm",
     peakTime: "5pm - 8pm",
     price: 150,
@@ -135,6 +149,9 @@ export const dataBase = [
     star: 4.3,
     image: "/images/9.jpg",
     googleMaps: "https://maps.app.goo.gl/EgaqMCxH8Ex6h3uf9",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2692485873285!2d120.98437709999999!3d14.583727699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbc6ad5b3e03%3A0x24c35cd024430ebf!2sCoffeepages%20Taft%20cor%20T.M.%20Kalaw!5e0!3m2!1sen!2sph!4v1763299889165!5m2!1sen!2sph",
+
     operatingHours: "6am - 11pm",
     peakTime: "4pm - 6pm",
     price: 250,
@@ -148,6 +165,9 @@ export const dataBase = [
     star: 4.7,
     image: "/images/10.jpg",
     googleMaps: "https://maps.app.goo.gl/efqw9BRFC1VbbykQA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d123560.6240904869!2d120.901975!3d14.5837132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb001e6af495%3A0x258e2d8ff99ddf86!2sARK%20Cafe!5e0!3m2!1sen!2sph!4v1763300538777!5m2!1sen!2sph",
+
     operatingHours: "8am - 8:30pm",
     peakTime: "3pm - 6pm",
     price: 100,
@@ -161,6 +181,9 @@ export const dataBase = [
     star: 4.8,
     image: "/images/11.jpg",
     googleMaps: "https://maps.app.goo.gl/QMe55surkKLXvRdR6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30887.922861422594!2d120.9687104!3d14.5996251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb41c4c4cc87%3A0x165de089380fc222!2sStudy%20Corner%20-%20San%20Marcelino!5e0!3m2!1sen!2sph!4v1763300842850!5m2!1sen!2sph",
+
     operatingHours: "8am - 8pm",
     peakTime: "5pm - 8pm",
     price: 100,
@@ -168,54 +191,45 @@ export const dataBase = [
   },
   {
     id: 12,
-    name: "Obscure Cafe",
-    location: "Ermita",
-    locType: "Study Cafe",
-    star: 4.5,
-    image: "/images/12.jpg",
-    googleMaps: "https://maps.app.goo.gl/mcbVm3U1kgb4MW4u9",
-    operatingHours: "24/7",
-    peakTime: "6pm - 9pm",
-    price: 200,
-    amenities: [
-      "Free Wifi",
-      "Food Options Available",
-      "Parking Space",
-      "Open 24/7",
-    ],
-  },
-  {
-    id: 13,
     name: "Regus - Manila, Times Plaza",
     location: "Ermita",
     locType: "Co-Working",
     star: 3.7,
     image: "/images/13.jpg",
     googleMaps: "https://maps.app.goo.gl/JNyVLNPiugxNzw5cA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30891.862319539236!2d120.9503424!3d14.5715439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca26e4db8115%3A0xf2d2d97949bb3fa0!2sRegus%20-%20Manila%2C%20Times%20Plaza!5e0!3m2!1sen!2sph!4v1763301423419!5m2!1sen!2sph",
+
     operatingHours: "24/7",
     price: 100,
     amenities: ["Free Wifi", "Conference Rooms"],
   },
   {
-    id: 14,
+    id: 13,
     name: "HomeRoom Co-Working and Study Lounge",
     location: "Sampaloc",
     locType: "Co-Working",
     star: 4.9,
     image: "/images/14.jpg",
     googleMaps: "https://maps.app.goo.gl/KNUoYMJzHdD34WbY8",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.760404749987!2d120.9892969!3d14.612720200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7b79638b443%3A0xe6f6a54566983f5!2sHomeRoom%20Co-Working%20and%20Study%20Lounge!5e0!3m2!1sen!2sph!4v1763394544502!5m2!1sen!2sph",
+
     operatingHours: "12pm - 6am",
     price: 200,
     amenities: ["Free Wifi", "Quiet Zones", "Printing Services", "Open 24/7"],
   },
   {
-    id: 15,
+    id: 14,
     name: "933 Coworking Cafe",
     location: "Sampaloc",
     locType: "Co-Working",
     star: 4.9,
     image: "/images/15.jpg",
     googleMaps: "https://maps.app.goo.gl/8AsUUQMUdi8F3Air7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.8820695670943!2d120.98950740000001!3d14.605793199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9ff71f5f109%3A0x885dadcb546d8b1b!2s933%20Coworking%20Cafe!5e0!3m2!1sen!2sph!4v1763394906018!5m2!1sen!2sph",
+
     operatingHours: "8am - 5am",
     price: 200,
     amenities: [
@@ -226,13 +240,16 @@ export const dataBase = [
     ],
   },
   {
-    id: 16,
+    id: 15,
     name: "Sumu Creative Space",
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.1,
     image: "/images/16.jpg",
     googleMaps: "https://maps.app.goo.gl/NGHyfgZSJqACZyf18",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.8710277444748!2d120.98887859999998!3d14.606421999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c953564d4c7d%3A0x31f0b14f92cada25!2sSumu%20Creative%20Space!5e0!3m2!1sen!2sph!4v1763395134319!5m2!1sen!2sph",
+
     operatingHours: "6am - 3am",
     peakTime: "6pm - 11pm",
     price: 200,
@@ -244,77 +261,95 @@ export const dataBase = [
     ],
   },
   {
-    id: 17,
+    id: 16,
     name: "Goodside Coffee",
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.9,
     image: "/images/17.jpg",
     googleMaps: "https://maps.app.goo.gl/2fzXUWxbMP46WkiXA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.841629785737!2d120.98622599999999!3d14.608096000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb8286040cb5%3A0xb35b026a7c166fea!2sGoodside%20Coffee!5e0!3m2!1sen!2sph!4v1763395446882!5m2!1sen!2sph",
+
     operatingHours: "10:30am - 12am",
     peakTime: "6pm - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Free Coffee", "Food Options Available"],
   },
   {
-    id: 18,
+    id: 17,
     name: "Calle Cafe",
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.1,
     image: "/images/18.jpg",
     googleMaps: "https://maps.app.goo.gl/TkPvWfWnFN7iW82x6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15443.470392609774!2d120.9706102!3d14.6066173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9004d94a3e9%3A0x84271ed683b63014!2sCalle%20Cafe%20by%20Don%20Gabriel%20-%20Espa%C3%B1a!5e0!3m2!1sen!2sph!4v1763396143118!5m2!1sen!2sph",
+
     operatingHours: "9am - 11pm",
     price: 200,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 19,
+    id: 18,
     name: "Cafe Y Ruedas",
     location: "Intramuros",
     locType: "Study Cafe",
     star: 4.6,
     image: "/images/19.jpg",
     googleMaps: "https://maps.app.goo.gl/S7VW2eUuMcb6NqFC9",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1676571377798!2d120.9796714!3d14.5895206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb0006d716a9%3A0x60352bc7ee0d01b9!2sCaf%C3%A9%20Y%20Ruedas!5e0!3m2!1sen!2sph!4v1763396426654!5m2!1sen!2sph",
+
     operatingHours: "10am - 10pm",
     peakTime: "3pm - 6pm",
     price: 100,
     amenities: ["Free Wifi", "Food Options Available", "Parking Space"],
   },
   {
-    id: 20,
+    id: 19,
     name: "Cafe Intramuros",
     location: "Intramuros",
     locType: "Study Cafe",
     star: 3.7,
     image: "/images/20.jpg",
     googleMaps: "https://maps.app.goo.gl/BSQf777DAMgTwg5w7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1662538826617!2d120.97508499999999!3d14.589600599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbb64df598b7%3A0x14530b6a83e53a54!2sCafe%20Intramuros!5e0!3m2!1sen!2sph!4v1763396574147!5m2!1sen!2sph",
+
     operatingHours: "10:30am - 8pm",
     peakTime: "6pm - 7pm",
     price: 200,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 21,
+    id: 20,
     name: "La Cathedral Cafe",
     location: "Intramuros",
     locType: "Study Cafe",
     star: 3.7,
     image: "/images/21.jpg",
     googleMaps: "https://maps.app.goo.gl/16uqv1LFEaAVdRHVA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.136455737399!2d120.9741772!3d14.5912993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb4388d9a055%3A0x142863562afc151c!2sLa%20Cathedral%20Cafe!5e0!3m2!1sen!2sph!4v1763396807531!5m2!1sen!2sph",
+
     operatingHours: "8am - 9pm",
     peakTime: "6pm - 9pm",
     price: 100,
     amenities: ["Free Wifi", "Food Options Available", "Quiet Zones"],
   },
   {
-    id: 22,
+    id: 21,
     name: "IN Cafe Bar",
     location: "Intramuros",
     locType: "Study Cafe",
     star: 4.5,
     image: "/images/22.jpg",
     googleMaps: "https://maps.app.goo.gl/tf2X8JbyzdqgwYL97",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1699023303117!2d120.97657869999999!3d14.5893926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb7de8280fab%3A0x751a97025e05367b!2sIN%20Cafe%20Bar!5e0!3m2!1sen!2sph!4v1763397139965!5m2!1sen!2sph",
+
     operatingHours: "9am - 9pm",
     peakTime: "1pm - 7pm",
     price: 200,
@@ -326,206 +361,255 @@ export const dataBase = [
     ],
   },
   {
-    id: 23,
+    id: 22,
     name: "Manila Coworking",
     location: "Intramuros",
     locType: "Co-Working",
     star: 4.9,
     image: "/images/23.jpg",
     googleMaps: "https://maps.app.goo.gl/qjUWFTt17bu3eyc3A",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91896608413!2d120.9349151!3d14.5854031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb8e3b2156f9%3A0x84e19041824f0715!2sManila%20Coworking!5e0!3m2!1sen!2sph!4v1763397166480!5m2!1sen!2sph",
+
     operatingHours: "9am - 6pm",
     peakTime: "3pm - 6pm",
     price: 200,
     amenities: ["Free Wifi", "Conference Rooms"],
   },
   {
-    id: 24,
+    id: 23,
     name: "JUST-IN-TIME STUDY HUB AND COWORKING SPACE",
     location: "Quiapo",
     locType: "Co-Working",
     star: 4.6,
     image: "/images/24.jpg",
     googleMaps: "https://maps.app.goo.gl/q9n8NpRpvd3s3do77",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91921859962!2d120.9349151!3d14.5854013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9a81a0f8499%3A0x859c0de05fd302ec!2sJUST-IN-TIME%20STUDY%20HUB%20AND%20COWORKING%20SPACE!5e0!3m2!1sen!2sph!4v1763444344265!5m2!1sen!2sph",
+
     operatingHours: "8am - 5am",
     price: 100,
     amenities: ["Free Wifi", "Quiet Zones"],
   },
   {
-    id: 25,
+    id: 24,
     name: "Quanto Lounge and Services",
     location: "Quiapo",
     locType: "Co-Working",
     star: 4.3,
     image: "/images/25.jpg",
     googleMaps: "https://maps.app.goo.gl/VMp78YtsiUVs5mck6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91921859962!2d120.9349151!3d14.5854013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f1a106006f%3A0x569fc66aedcadada!2sQuanto%20Lounge%20and%20Services!5e0!3m2!1sen!2sph!4v1763444516378!5m2!1sen!2sph",
+
     operatingHours: "12pm - 10pm",
     price: 100,
     amenities: ["Free Wifi", "Conference Rooms"],
   },
   {
-    id: 26,
+    id: 25,
     name: "5&2 Coffeehouse",
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.6,
     image: "/images/26.jpg",
     googleMaps: "https://maps.app.goo.gl/fD5DAMBLX2LTuMFW7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91947111508!2d120.934915!3d14.5853995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f845212efb%3A0x16f593bd1b4fa8a5!2sBeanbox!5e0!3m2!1sen!2sph!4v1763444832013!5m2!1sen!2sph",
+
     operatingHours: "7am - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 27,
+    id: 26,
     name: "Beanbox",
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.1,
     image: "/images/27.jpg",
     googleMaps: "https://maps.app.goo.gl/mdg61m68dyuGiB329",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91947111508!2d120.934915!3d14.5853995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f845212efb%3A0x16f593bd1b4fa8a5!2sBeanbox!5e0!3m2!1sen!2sph!4v1763444832013!5m2!1sen!2sph",
+
     operatingHours: "9am - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 28,
+    id: 27,
     name: "Caffeine Express",
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.3,
     image: "/images/28.jpg",
     googleMaps: "https://maps.app.goo.gl/nrHw3cVMmKzVkCgZA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30889.91947111508!2d120.934915!3d14.5853995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f780649941%3A0x8a45cabf90bd8f53!2sCaffeine%20Express!5e0!3m2!1sen!2sph!4v1763444972606!5m2!1sen!2sph",
+
     operatingHours: "10am - 10pm",
     price: 200,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 29,
+    id: 28,
     name: "The Bad Shot Coffee",
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 4.9,
     image: "/images/29.jpg",
     googleMaps: "https://maps.app.goo.gl/wAzSPscwXPA8XNbv8",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.20686532809!2d120.9580364!3d14.6189545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b5681c2f166d%3A0x389aa05a50b13362!2sThe%20Bad%20Shot%20Coffee%20-%20Tomas%20Mapua%20Branch!5e0!3m2!1sen!2sph!4v1763445141366!5m2!1sen!2sph",
+
     operatingHours: "7am - 11pm",
     price: 100,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 30,
+    id: 29,
     name: "Lai Lai Coffee",
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 4.6,
     image: "/images/30.jpg",
     googleMaps: "https://maps.app.goo.gl/syPwFc9JQJy2kVMo7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.20686532809!2d120.9580364!3d14.6189545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbd1681cc0cd%3A0x94f557e880f5f31!2sLai%20Lai%20Coffee!5e0!3m2!1sen!2sph!4v1763445369263!5m2!1sen!2sph",
+
     operatingHours: "7am - 9:30pm",
     price: 100,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 31,
+    id: 30,
     name: "Fumes Cafe",
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 5.0,
     image: "/images/31.jpg",
     googleMaps: "https://maps.app.goo.gl/6wkC2NCcJnrDzMxf9",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.20686532809!2d120.9580364!3d14.6189545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb003e57d9fb%3A0x7a38be63c023dba2!2sFumes%20Cafe!5e0!3m2!1sen!2sph!4v1763445383434!5m2!1sen!2sph",
+
     operatingHours: "8am - 12am",
     price: 250,
     amenities: ["Free Wifi", "Food Options Available"],
   },
   {
-    id: 34,
+    id: 31,
     name: "Lunán — Co-Working & Study Hub",
     location: "Santa Mesa",
     locType: "Co-Working",
     star: 4.9,
     image: "/images/34.jpg",
     googleMaps: "https://maps.app.goo.gl/GjR6ydTm7v3cbfjZA",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.803130336735!2d120.9533939!3d14.6147131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9004305d3dd%3A0xbcf1ad188a9bb383!2sLun%C3%A1n%20%E2%80%94%20Co-working%20Space%20%26%20Study%20Hub!5e0!3m2!1sen!2sph!4v1763445407506!5m2!1sen!2sph",
+
     operatingHours: "7am - 11pm",
     price: 100,
     amenities: ["Free Wifi", "Quiet Zones"],
   },
   {
-    id: 35,
+    id: 32,
     name: "Study Corner Coworking Space",
     location: "Santa Mesa",
     locType: "Co-Working",
     star: 4.9,
     image: "/images/35.jpg",
     googleMaps: "https://maps.app.goo.gl/3QSXBazWtrnohwRN6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.803130336735!2d120.9533939!3d14.6147131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9817571ffdf%3A0xc34e15bbf9ddcc7!2sStudy%20Corner%20Coworking%20Space!5e0!3m2!1sen!2sph!4v1763446150362!5m2!1sen!2sph",
+
     operatingHours: "8am - 8pm",
     price: 150,
     amenities: ["Free Wifi", "Quiet Zones"],
   },
   {
-    id: 36,
+    id: 33,
     name: "But First, Coffee (BFC) - V. Mapa",
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.7,
     image: "/images/36.jpg",
     googleMaps: "https://maps.app.goo.gl/SfN4RQLmyZydXrAx8",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.792222684093!2d120.9533938!3d14.6147907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f707a3ae57%3A0xd6323e7436777a3c!2sBut%20First%2C%20Coffee%20(BFC)%20-%20V.%20Mapa!5e0!3m2!1sen!2sph!4v1763446170497!5m2!1sen!2sph",
+
     operatingHours: "7am - 11pm",
     price: 100,
     amenities: ["Free Wifi", "Air Conditioning"],
   },
   {
-    id: 37,
+    id: 34,
     name: "Jack's Corner Coffee Shop",
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.7,
     image: "/images/37.jpg",
     googleMaps: "https://maps.app.goo.gl/TWDAFHRagGdvhbuQ7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30888.3214484045!2d120.980888!3d14.5967863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c994b313301f%3A0xbc6b4a399377115f!2sJack&#39;s%20Corner%20Coffee%20Shop!5e0!3m2!1sen!2sph!4v1763446182028!5m2!1sen!2sph",
+
     operatingHours: "9am - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Cozy Ambiance"],
   },
   {
-    id: 38,
+    id: 35,
     name: "Bricks & Brew",
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.2,
     image: "/images/38.jpg",
     googleMaps: "https://maps.app.goo.gl/8CVtTz3RjLf573s16",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30888.3214484045!2d120.980888!3d14.5967863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fa8f7a5c89%3A0xc692ed94523f5bc7!2sBricks%20%26%20Brew!5e0!3m2!1sen!2sph!4v1763446194403!5m2!1sen!2sph",
+
     operatingHours: "9am - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Good Lighting"],
   },
   {
-    id: 39,
+    id: 36,
     name: "MAFE Coffee House",
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.8,
     image: "/images/39.jpg",
     googleMaps: "https://maps.app.goo.gl/dkLQqqTKoDWeAyy37",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.80363636048!2d120.9533938!3d14.6147095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9609cd27333%3A0xb7bb18612f77ae5e!2sMAFE%20Coffee%20House!5e0!3m2!1sen!2sph!4v1763447194993!5m2!1sen!2sph",
+
     operatingHours: "11am - 8pm",
     price: 100,
     amenities: ["Free Wifi", "Quiet Zones"],
   },
   {
-    id: 40,
+    id: 37,
     name: "Cram Coffee",
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.8,
     image: "/images/40.jpg",
     googleMaps: "https://maps.app.goo.gl/yrYoE3mC17H6GsmJ7",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.80363636048!2d120.9533938!3d14.6147095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90046b51bb1%3A0x73ce109f24486c61!2sCram%20Coffee!5e0!3m2!1sen!2sph!4v1763447205297!5m2!1sen!2sph",
     operatingHours: "9am - 9pm",
     price: 200,
     amenities: ["Free Wifi", "Group Seating"],
   },
   {
-    id: 41,
+    id: 38,
     name: "Presko Coffee Manila",
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.2,
     image: "/images/41.jpg",
     googleMaps: "https://maps.app.goo.gl/QPGhBf8xaf5uzXXi6",
+    mapsIframe:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.80363636048!2d120.9533938!3d14.6147095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9c08c3201a7%3A0xde5a8534332c7fab!2sPresko%20Coffee%20Manila!5e0!3m2!1sen!2sph!4v1763447228779!5m2!1sen!2sph",
     operatingHours: "7am - 11pm",
     price: 200,
     amenities: ["Free Wifi", "Outdoor Seating"],
