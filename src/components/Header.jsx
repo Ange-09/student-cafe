@@ -9,9 +9,8 @@ function Header() {
   return (
     <div className="header">
       <p className="header-title">
-        <span className="header-left-text">SC</span>
         <span className="header-full-text">
-          <span className="header-line"> | </span>Student Cafe
+          <span className="header-line"> | </span>Study Spot
         </span>
       </p>
 

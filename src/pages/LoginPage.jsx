@@ -28,7 +28,7 @@ export default function LoginPage() {
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
-          <h1 className="login-title">Student Lounge Finder</h1>
+          <h1 className="login-title">Study Spot</h1>
           <p className="login-subtitle">Sign in to continue</p>
         </div>
 
