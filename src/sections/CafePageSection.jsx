@@ -1,8 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/cafepagesection.css";
 import ReserveButton from "../components/ReserveButton";
 
 function CafePageSection({ cafe }) {
+  // State for managing comments
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      name: "Anonymous Student",
+      rating: 4.5,
+      text: "Great place to study! Very quiet and comfortable seats.",
+    },
+    {
+      id: 2,
+      name: "Anonymous Student",
+      rating: 4,
+      text: "Good amenities and reliable wifi. Gets crowded during peak hours though.",
+    },
+  ]);
+
+  // State for the new comment form
+  const [newComment, setNewComment] = useState({
+    name: "",
+    rating: 5,
+    text: "",
+  });
+
+  const [showForm, setShowForm] = useState(false);
+
+  // Handle form submission
+  const handleSubmitComment = (e) => {
+    e.preventDefault();
+
+    if (newComment.text.trim() === "") {
+      alert("Please write a comment before submitting.");
+      return;
+    }
+
+    // Add the new comment to the list
+    const comment = {
+      id: comments.length + 1,
+      name: newComment.name.trim() || "Anonymous Student",
+      rating: newComment.rating,
+      text: newComment.text,
+    };
+
+    setComments([comment, ...comments]);
+
+    // Reset form
+    setNewComment({
+      name: "",
+      rating: 5,
+      text: "",
+    });
+    setShowForm(false);
+  };
+
   // If no cafe data is provided, show a message
   if (!cafe) {
     return (
@@ -160,6 +213,33 @@ function CafePageSection({ cafe }) {
           </svg>
         );
       }
+    }
+    return stars;
+  };
+
+  // Render interactive star rating selector
+  const renderStarSelector = () => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <svg
+          key={i}
+          className={`star-selector ${
+            i <= newComment.rating ? "selected" : ""
+          }`}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill={i <= newComment.rating ? "#ffc107" : "#e0e0e0"}
+          stroke={i <= newComment.rating ? "#ffa000" : "#bdbdbd"}
+          strokeWidth="1"
+          onClick={() => setNewComment({ ...newComment, rating: i })}
+          style={{ cursor: "pointer" }}
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      );
     }
     return stars;
   };
@@ -347,27 +427,67 @@ function CafePageSection({ cafe }) {
           </div>
 
           <div className="comments">
-            <h3 className="comments-title">Comments</h3>
+            <div className="comments-header">
+              <h3 className="comments-title">Comments</h3>
+              <button
+                className="add-comment-btn"
+                onClick={() => setShowForm(!showForm)}
+              >
+                {showForm ? "Cancel" : "+ Add Review"}
+              </button>
+            </div>
+
+            {showForm && (
+              <div className="comment-form">
+                <div className="form-group">
+                  <label>Your Name (optional)</label>
+                  <input
+                    type="text"
+                    placeholder="Leave blank to post as Anonymous Student"
+                    value={newComment.name}
+                    onChange={(e) =>
+                      setNewComment({ ...newComment, name: e.target.value })
+                    }
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Rating</label>
+                  <div className="star-rating-selector">
+                    {renderStarSelector()}
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label>Your Review</label>
+                  <textarea
+                    placeholder="Share your experience at this cafe..."
+                    value={newComment.text}
+                    onChange={(e) =>
+                      setNewComment({ ...newComment, text: e.target.value })
+                    }
+                    rows="4"
+                  />
+                </div>
+                <button
+                  className="submit-comment-btn"
+                  onClick={handleSubmitComment}
+                >
+                  Submit Review
+                </button>
+              </div>
+            )}
+
             <div className="comments-list">
-              <div className="comment-item">
-                <div className="comment-header">
-                  <span className="commenter-name">Anonymous Student</span>
-                  <div className="comment-rating">{renderStars(4.5)}</div>
+              {comments.map((comment) => (
+                <div key={comment.id} className="comment-item">
+                  <div className="comment-header">
+                    <span className="commenter-name">{comment.name}</span>
+                    <div className="comment-rating">
+                      {renderStars(comment.rating)}
+                    </div>
+                  </div>
+                  <p className="comment-text">{comment.text}</p>
                 </div>
-                <p className="comment-text">
-                  Great place to study! Very quiet and comfortable seats.
-                </p>
-              </div>
-              <div className="comment-item">
-                <div className="comment-header">
-                  <span className="commenter-name">Anonymous Student</span>
-                  <div className="comment-rating">{renderStars(4)}</div>
-                </div>
-                <p className="comment-text">
-                  Good amenities and reliable wifi. Gets crowded during peak
-                  hours though.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

@@ -472,5 +472,139 @@
   }
 }
 
-.reservebutton {
+/* Comment Form Styles */
+
+.add-comment-btn {
+  background-color: #8b7355;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.3);
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.add-comment-btn:hover {
+  background-color: #6b5644;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.4);
+}
+
+.comment-form {
+  background-color: #fff5e6;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 2px solid #d4a574;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #5d4e37;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #d4a574;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #5d4e37;
+  background-color: white;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8b7355;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #d4a574;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #5d4e37;
+  background-color: white;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b7355;
+}
+
+.star-rating-selector {
+  display: flex;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.star-selector {
+  transition: all 0.2s ease;
+}
+
+.star-selector:hover {
+  transform: scale(1.15);
+}
+
+.star-selector.selected {
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.5));
+}
+
+.submit-comment-btn {
+  background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+  width: 100%;
+}
+
+.submit-comment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 115, 85, 0.4);
+}
+
+.submit-comment-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for comment form */
+@media (max-width: 768px) {
+  .comments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .add-comment-btn {
+    width: 100%;
+  }
+
+  .comment-form {
+    padding: 15px;
+  }
 }
