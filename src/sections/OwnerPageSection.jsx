@@ -2,6 +2,7 @@ import "../styles/ownerpagesection.css";
 
 import CafeCustomerChart from "../components/CafeCustomerChart";
 import StatsDisplay from "../components/StatsDisplay";
+import CustomerReviewSummary from "../components/CustomerReviewSummary";
 
 function OwnerPageSection() {
   return (
@@ -14,7 +15,9 @@ function OwnerPageSection() {
         <div className="totalcustomers">
           <StatsDisplay />
         </div>
-        <div className="ops-reviews"></div>
+        <div className="ops-reviews">
+          <CustomerReviewSummary />
+        </div>
       </div>
       <div className="ops-row-three">
         <div className="seat-adjustment"></div>
