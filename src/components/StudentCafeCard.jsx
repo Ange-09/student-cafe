@@ -14,6 +14,19 @@ const StudentCafeCard = ({ cafe, onCardClick, onLocationClick }) => {
     // ... (keep all your existing amenity icons)
   };
 
+  // Function to convert price to peso signs
+  const getPriceDisplay = (price) => {
+    if (!price) return "";
+
+    if (price <= 150) {
+      return "₱";
+    } else if (price <= 300) {
+      return "₱₱";
+    } else {
+      return "₱₱₱";
+    }
+  };
+
   // Calculate visible amenities based on container width and height
   useEffect(() => {
     const calculateVisibleAmenities = () => {
@@ -204,7 +217,7 @@ const StudentCafeCard = ({ cafe, onCardClick, onLocationClick }) => {
 
           {cafe.price && (
             <div className="price-display">
-              <span className="price-value">₱{cafe.price}</span>
+              <span className="price-value">{getPriceDisplay(cafe.price)}</span>
             </div>
           )}
         </div>
