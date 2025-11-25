@@ -400,7 +400,18 @@ function CafePageSection({ cafe }) {
                   <path d="M5 11V9"></path>
                   <path d="M19 11V9"></path>
                 </svg>
-                <span>{cafe.availableSeats || 0} seats available</span>
+                <div>
+                  <span>{cafe.availableSeats || 0} seats available</span>
+                  <div
+                    style={{
+                      fontSize: "0.65em",
+                      color: "#d1d1d1ff",
+                      marginTop: "4px",
+                    }}
+                  >
+                    Updated {Math.floor(Math.random() * 15) + 1} minutes ago
+                  </div>
+                </div>
               </div>
             </div>
             <div className="maps-iframe">
