@@ -15,7 +15,8 @@ const HOURLY_RATE = 100;
 
 export default function ReserveButton() {
   const [showModal, setShowModal] = useState(false);
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [seats, setSeats] = useState(1);
   const [time, setTime] = useState("");
   const [hours, setHours] = useState(1);
@@ -24,6 +25,7 @@ export default function ReserveButton() {
   );
   const [paymentMethod, setPaymentMethod] = useState("");
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [receiptNumber, setReceiptNumber] = useState("");
 
   const generateTimeSlots = () => {
     const slots = [];
@@ -52,7 +54,7 @@ export default function ReserveButton() {
 
   const handleReserveClick = () => {
     setShowModal(true);
-    setStep(1);
+    setStep(0);
   };
 
   const handleNext = () => {
@@ -65,6 +67,14 @@ export default function ReserveButton() {
 
   const handleBack = () => {
     setStep(step - 1);
+  };
+
+  const handleTermsAccept = () => {
+    if (!termsAccepted) {
+      alert("Please accept the terms and conditions to continue");
+      return;
+    }
+    setStep(1);
   };
 
   const updateMenuQuantity = (itemId, quantity) => {
@@ -93,12 +103,24 @@ export default function ReserveButton() {
     setStep(5);
   };
 
+  const generateReceiptNumber = () => {
+    return (
+      "RCP" +
+      Math.floor(Math.random() * 1000000)
+        .toString()
+        .padStart(6, "0")
+    );
+  };
+
   const handleFinish = () => {
+    const newReceiptNumber = generateReceiptNumber();
+    setReceiptNumber(newReceiptNumber);
     setShowModal(false);
     setShowConfirmation(true);
     setTimeout(() => {
       setShowConfirmation(false);
-      setStep(1);
+      setStep(0);
+      setTermsAccepted(false);
       setSeats(1);
       setTime("");
       setHours(1);
@@ -106,12 +128,13 @@ export default function ReserveButton() {
         MENU_ITEMS.reduce((acc, item) => ({ ...acc, [item.id]: 0 }), {})
       );
       setPaymentMethod("");
-    }, 3000);
+    }, 5000);
   };
 
   const closeModal = () => {
     setShowModal(false);
-    setStep(1);
+    setStep(0);
+    setTermsAccepted(false);
     setSeats(1);
     setTime("");
     setHours(1);
@@ -138,6 +161,78 @@ export default function ReserveButton() {
             </div>
 
             <div className="modal-body">
+              {/* Step 0: Terms & Conditions */}
+              {step === 0 && (
+                <div className="form-section">
+                  <h3 className="section-title">Terms & Conditions</h3>
+                  <div className="terms-content">
+                    <h4>Study Café Reservation Agreement</h4>
+                    <p>
+                      By reserving a seat at our study café, you agree to the
+                      following terms and conditions:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Reservation Validity:</strong> Reservations are
+                        valid for the selected date and time. Please arrive
+                        within 20 minutes of your reservation time.
+                      </li>
+                      <li>
+                        <strong>Cancellation:</strong> Cancellations must be
+                        made at least 2 hours before your reservation time for a
+                        full refund.
+                      </li>
+                      <li>
+                        <strong>Conduct:</strong> Guests must maintain a quiet
+                        environment and respect other patrons. Disruptive
+                        behavior may result in removal without refund.
+                      </li>
+                      <li>
+                        <strong>Food & Beverages:</strong> All food and
+                        beverages must be purchased from our café. Outside food
+                        and drinks are not permitted.
+                      </li>
+                      <li>
+                        <strong>Payment:</strong> Payment must be completed at
+                        the time of reservation. No refunds will be issued for
+                        unused hours.
+                      </li>
+                      <li>
+                        <strong>Liability:</strong> We are not responsible for
+                        lost, stolen, or damaged personal belongings. Please
+                        keep your valuables secure.
+                      </li>
+                      <li>
+                        <strong>Right to Refuse Service:</strong> Management
+                        reserves the right to refuse service to anyone violating
+                        these terms.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="terms-checkbox">
+                    <input
+                      type="checkbox"
+                      id="terms-check"
+                      checked={termsAccepted}
+                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                      className="checkbox-input"
+                    />
+                    <label htmlFor="terms-check" className="checkbox-label">
+                      I have read and agree to the Terms & Conditions
+                    </label>
+                  </div>
+                  <button
+                    onClick={handleTermsAccept}
+                    className={`btn ${
+                      termsAccepted ? "btn-primary" : "btn-disabled"
+                    }`}
+                    disabled={!termsAccepted}
+                  >
+                    Accept & Continue
+                  </button>
+                </div>
+              )}
+
               {/* Step 1: Seats and Time */}
               {step === 1 && (
                 <div className="form-section">
@@ -403,7 +498,7 @@ export default function ReserveButton() {
                     Back
                   </button>
                 )}
-                {step < 4 && (
+                {step >= 1 && step < 4 && (
                   <button onClick={handleNext} className="btn btn-primary">
                     Next
                   </button>
@@ -448,6 +543,74 @@ export default function ReserveButton() {
               Your reservation has been successfully processed. You will receive
               a confirmation shortly.
             </p>
+
+            {/* Payment Receipt */}
+            <div className="payment-receipt">
+              <h3 className="receipt-title">Payment Receipt</h3>
+              <div className="receipt-number">
+                <p>
+                  <strong>Receipt #:</strong> {receiptNumber}
+                </p>
+              </div>
+
+              <div className="receipt-section">
+                <h4>Reservation Details</h4>
+                <div className="receipt-item">
+                  <span>Seats</span>
+                  <span>{seats}</span>
+                </div>
+                <div className="receipt-item">
+                  <span>Time</span>
+                  <span>{getDisplayTime(time)}</span>
+                </div>
+                <div className="receipt-item">
+                  <span>Hours Reserved</span>
+                  <span>{hours} hrs</span>
+                </div>
+                <div className="receipt-item receipt-item-total">
+                  <span>Reservation Fee</span>
+                  <span>₱{calculateHoursSubtotal()}</span>
+                </div>
+              </div>
+
+              {calculateMenuSubtotal() > 0 && (
+                <div className="receipt-section">
+                  <h4>Menu Items</h4>
+                  {MENU_ITEMS.map((item) => {
+                    if (menuItems[item.id] > 0) {
+                      return (
+                        <div key={item.id} className="receipt-item">
+                          <span>
+                            {item.name} x{menuItems[item.id]}
+                          </span>
+                          <span>₱{item.price * menuItems[item.id]}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
+                  <div className="receipt-item receipt-item-total">
+                    <span>Menu Subtotal</span>
+                    <span>₱{calculateMenuSubtotal()}</span>
+                  </div>
+                </div>
+              )}
+
+              <div className="receipt-section receipt-total-section">
+                <div className="receipt-item receipt-item-grand-total">
+                  <span>Total Amount</span>
+                  <span>₱{calculateTotal()}</span>
+                </div>
+                <div className="receipt-item">
+                  <span>Payment Method</span>
+                  <span>{paymentMethod}</span>
+                </div>
+              </div>
+
+              <div className="receipt-footer">
+                <p>Thank you for your reservation!</p>
+              </div>
+            </div>
           </div>
         </div>
       )}
