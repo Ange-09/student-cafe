@@ -1,63 +1,74 @@
-import React, { createContext, useState, useMemo } from "react";
+// src/context/AppContext.jsx
+import React, { createContext, useState, useMemo, useEffect } from "react";
+import { dataBase } from "../context/DataBase";
 
-// 1️⃣ Create the Context
 export const AppContext = createContext();
 
-// 2️⃣ Create the Provider component
 export const AppProvider = ({ children }) => {
-  // Global States
-  const [selectedLocation, setSelectedLocation] = useState(""); //Location of Cafe
-  const [selectedAmenities, setSelectedAmenities] = useState([]); //Cafe Amenities
-  const [selectedCafeName, setSelectedCafeName] = useState(""); //Name of Cafe
-  const [selectedRating, setSelectedRating] = useState(null); // Cafe Rating
-  const [selectedType, setSelectedType] = useState(null); // Type of Cafe
-  const [selectedPrice, setSelectedPrice] = useState(null); // Price Range (1, 2, or 3)
-
-  // 🔥 NEW: Selected cafe for detail page
+  // --- existing filter states ---
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedAmenities, setSelectedAmenities] = useState([]);
+  const [selectedCafeName, setSelectedCafeName] = useState("");
+  const [selectedRating, setSelectedRating] = useState(null);
+  const [selectedType, setSelectedType] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedCafe, setSelectedCafe] = useState(null);
 
-  // 🔥 Filter Function
-  const filterCafes = (cafes) => {
-    return cafes.filter((cafe) => {
-      // Filter by location
+  // --- NEW: cafes state (load from localStorage first if present) ---
+  const [cafes, setCafes] = useState(() => {
+    try {
+      const raw = localStorage.getItem("cafes_v1");
+      return raw ? JSON.parse(raw) : dataBase;
+    } catch {
+      return dataBase;
+    }
+  });
+
+  // Persist cafes on change
+  useEffect(() => {
+    try {
+      localStorage.setItem("cafes_v1", JSON.stringify(cafes));
+    } catch {}
+  }, [cafes]);
+
+  // --- NEW: update available seats (and any other field if needed) ---
+  const updateSeats = (id, newSeats) => {
+    setCafes((prev) =>
+      prev.map((cafe) =>
+        cafe.id === id ? { ...cafe, availableSeats: newSeats } : cafe
+      )
+    );
+  };
+
+  // --- your existing filter function (unchanged) ---
+  const filterCafes = (cafesList) => {
+    return cafesList.filter((cafe) => {
       const matchesLocation =
         !selectedLocation ||
         cafe.location.toLowerCase().includes(selectedLocation.toLowerCase());
-
-      // Filter by name
       const matchesName =
         !selectedCafeName ||
         cafe.name.toLowerCase().includes(selectedCafeName.toLowerCase());
-
-      // Filter by rating (minimum rating)
       const matchesRating = !selectedRating || cafe.star >= selectedRating;
-
-      // Filter by type
       const matchesType = !selectedType || cafe.locType === selectedType;
-
-      // Filter by amenities (cafe must have ALL selected amenities)
       const matchesAmenities =
         selectedAmenities.length === 0 ||
         selectedAmenities.every((amenity) => cafe.amenities.includes(amenity));
-
-      // Filter by price range
       const matchesPrice =
         !selectedPrice ||
         (() => {
           const price = cafe.price || 0;
           switch (selectedPrice) {
-            case 1: // ₱ - Budget (≤150)
+            case 1:
               return price <= 150;
-            case 2: // ₱₱ - Moderate (151-250)
+            case 2:
               return price >= 151 && price <= 250;
-            case 3: // ₱₱₱ - Premium (≥251)
+            case 3:
               return price >= 251;
             default:
               return true;
           }
         })();
-
-      // Return true only if ALL filters match
       return (
         matchesLocation &&
         matchesName &&
@@ -69,7 +80,6 @@ export const AppProvider = ({ children }) => {
     });
   };
 
-  // 🔥 Check if any filters are active
   const hasActiveFilters = useMemo(() => {
     return !!(
       selectedLocation ||
@@ -88,7 +98,6 @@ export const AppProvider = ({ children }) => {
     selectedPrice,
   ]);
 
-  // 🔥 Clear all filters
   const clearAllFilters = () => {
     setSelectedLocation("");
     setSelectedCafeName("");
@@ -96,13 +105,12 @@ export const AppProvider = ({ children }) => {
     setSelectedType(null);
     setSelectedAmenities([]);
     setSelectedPrice(null);
-    console.log("All filters cleared");
   };
 
-  // 3️⃣ Return Provider that shares the states and functions
   return (
     <AppContext.Provider
       value={{
+        // filter states + setters
         selectedLocation,
         setSelectedLocation,
         selectedAmenities,
@@ -115,11 +123,16 @@ export const AppProvider = ({ children }) => {
         setSelectedType,
         selectedPrice,
         setSelectedPrice,
-        selectedCafe, // 🔥 NEW
-        setSelectedCafe, // 🔥 NEW
+        selectedCafe,
+        setSelectedCafe,
         filterCafes,
         hasActiveFilters,
         clearAllFilters,
+
+        // NEW: cafes + updater
+        cafes,
+        setCafes,
+        updateSeats,
       }}
     >
       {children}

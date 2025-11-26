@@ -1,0 +1,327 @@
+/* EditSeatsButton.css */
+
+/* Sticky Button */
+.edit-seats-button {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: #d97706;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.edit-seats-button:hover {
+  background-color: #b45309;
+  transform: scale(1.1);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+/* Modal Container */
+.modal-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 28rem;
+  width: 100%;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.close-button {
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #4b5563;
+}
+
+/* Cafe Name Display */
+.cafe-name-display {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.cafe-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Date and Time */
+.datetime-display {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.time {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Seats Section */
+.seats-section {
+  margin-bottom: 1.5rem;
+}
+
+.seats-display {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.seats-display.current {
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+.seats-display.new {
+  color: #d97706;
+  min-width: 100px;
+  font-size: 3rem;
+}
+
+/* Seats Counter */
+.seats-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.counter-button {
+  border: none;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.counter-button.decrement {
+  background-color: #ef4444;
+}
+
+.counter-button.decrement:hover {
+  background-color: #dc2626;
+}
+
+.counter-button.increment {
+  background-color: #10b981;
+}
+
+.counter-button.increment:hover {
+  background-color: #059669;
+}
+
+/* Buttons */
+.primary-button {
+  width: 100%;
+  background-color: #d97706;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #b45309;
+}
+
+.secondary-button {
+  flex: 1;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.secondary-button:hover {
+  background-color: #d1d5db;
+}
+
+.confirm-button {
+  flex: 1;
+  background-color: #10b981;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+  background-color: #059669;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Confirmation Box */
+.confirmation-box {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #fffbeb;
+  border: 2px solid #fcd34d;
+  border-radius: 0.5rem;
+}
+
+.cafe-name-confirm {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.seats-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.seats-column {
+  flex: 1;
+}
+
+.seats-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.seats-value.old {
+  color: #9ca3af;
+}
+
+.seats-value.new {
+  color: #d97706;
+}
+
+.arrow {
+  font-size: 1.875rem;
+  color: #9ca3af;
+  padding: 0 1rem;
+}
+
+.datetime-small {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Success Body */
+.success-body {
+  text-align: center;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #d1fae5;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  color: #10b981;
+}
+
+.success-message {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.highlight-seats {
+  font-weight: 600;
+  color: #d97706;
+}

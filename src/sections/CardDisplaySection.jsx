@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 🔥 NEW
 import StudentCafeCard from "../components/StudentCafeCard";
-import { dataBase } from "../context/DataBase";
 import { AppContext } from "../context/AppContext";
 import "../styles/carddisplaysection.css";
 
@@ -26,6 +25,7 @@ function CardDisplaySection() {
     setSelectedAmenities,
     setSelectedType,
     setSelectedCafeName,
+    cafes,
   } = useContext(AppContext);
 
   const cardsPerPage = 9;
@@ -43,12 +43,12 @@ function CardDisplaySection() {
   ]);
 
   // Add safety check AFTER all hooks
-  if (!dataBase || dataBase.length === 0) {
+  if (!cafes || cafes.length === 0) {
     return <div className="no-cafes">No cafes available</div>;
   }
 
   // Use the filterCafes function from context
-  const filteredCafes = filterCafes(dataBase);
+  const filteredCafes = filterCafes(cafes);
 
   // Calculate pagination with filtered data
   const totalPages = Math.ceil(filteredCafes.length / cardsPerPage);

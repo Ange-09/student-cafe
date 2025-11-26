@@ -28,7 +28,7 @@ export const dataBase = [
     location: "Malate",
     locType: "Study Cafe",
     star: 4.3,
-    availableSeats: 9,
+    availableSeats: 5,
     image: "/images/2.jpg",
     googleMaps: "https://maps.app.goo.gl/yfdnTFjCWeiAx7jq5",
     mapsIframe:
