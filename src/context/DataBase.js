@@ -98,6 +98,7 @@ export const dataBase = [
     location: "Malate",
     locType: "Co-Working",
     star: 5.0,
+    availableSeats: 15,
     image: "/images/6.jpg",
     googleMaps: "https://maps.app.goo.gl/eNKnFZ2wCJMBBnBL7",
     mapsIframe:
@@ -114,6 +115,7 @@ export const dataBase = [
     location: "Malate",
     locType: "Co-Working",
     star: 4.6,
+    availableSeats: 5,
     image: "/images/7.jpg",
     googleMaps: "https://maps.app.goo.gl/Gk2MWbPmkSzB1JAX9",
     mapsIframe:
@@ -130,6 +132,7 @@ export const dataBase = [
     location: "Ermita",
     locType: "Study Cafe",
     star: 4.8,
+    availableSeats: 14,
     availableSeats: 16,
     image: "/images/8.jpg",
     googleMaps: "https://maps.app.goo.gl/oubfXTQCMTt6eA9c7",
@@ -147,6 +150,7 @@ export const dataBase = [
     location: "Ermita",
     locType: "Study Cafe",
     star: 4.3,
+    availableSeats: 17,
     image: "/images/9.jpg",
     googleMaps: "https://maps.app.goo.gl/EgaqMCxH8Ex6h3uf9",
     mapsIframe:
@@ -163,6 +167,7 @@ export const dataBase = [
     location: "Ermita",
     locType: "Study Cafe",
     star: 4.7,
+    availableSeats: 3,
     image: "/images/10.jpg",
     googleMaps: "https://maps.app.goo.gl/efqw9BRFC1VbbykQA",
     mapsIframe:
@@ -179,6 +184,7 @@ export const dataBase = [
     location: "Ermita",
     locType: "Co-Working",
     star: 4.8,
+    availableSeats: 25,
     image: "/images/11.jpg",
     googleMaps: "https://maps.app.goo.gl/QMe55surkKLXvRdR6",
     mapsIframe:
@@ -195,6 +201,7 @@ export const dataBase = [
     location: "Ermita",
     locType: "Co-Working",
     star: 3.7,
+    availableSeats: 22,
     image: "/images/13.jpg",
     googleMaps: "https://maps.app.goo.gl/JNyVLNPiugxNzw5cA",
     mapsIframe:
@@ -210,6 +217,7 @@ export const dataBase = [
     location: "Sampaloc",
     locType: "Co-Working",
     star: 4.9,
+    availableSeats: 10,
     image: "/images/14.jpg",
     googleMaps: "https://maps.app.goo.gl/KNUoYMJzHdD34WbY8",
     mapsIframe:
@@ -225,6 +233,7 @@ export const dataBase = [
     location: "Sampaloc",
     locType: "Co-Working",
     star: 4.9,
+    availableSeats: 11,
     image: "/images/15.jpg",
     googleMaps: "https://maps.app.goo.gl/8AsUUQMUdi8F3Air7",
     mapsIframe:
@@ -245,6 +254,7 @@ export const dataBase = [
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.1,
+    availableSeats: 4,
     image: "/images/16.jpg",
     googleMaps: "https://maps.app.goo.gl/NGHyfgZSJqACZyf18",
     mapsIframe:
@@ -266,6 +276,7 @@ export const dataBase = [
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.9,
+    availableSeats: 2,
     image: "/images/17.jpg",
     googleMaps: "https://maps.app.goo.gl/2fzXUWxbMP46WkiXA",
     mapsIframe:
@@ -282,6 +293,7 @@ export const dataBase = [
     location: "Sampaloc",
     locType: "Study Cafe",
     star: 4.1,
+    availableSeats: 1,
     image: "/images/18.jpg",
     googleMaps: "https://maps.app.goo.gl/TkPvWfWnFN7iW82x6",
     mapsIframe:
@@ -297,6 +309,7 @@ export const dataBase = [
     location: "Intramuros",
     locType: "Study Cafe",
     star: 4.6,
+    availableSeats: 9,
     image: "/images/19.jpg",
     googleMaps: "https://maps.app.goo.gl/S7VW2eUuMcb6NqFC9",
     mapsIframe:
@@ -313,6 +326,7 @@ export const dataBase = [
     location: "Intramuros",
     locType: "Study Cafe",
     star: 3.7,
+    availableSeats: 28,
     image: "/images/20.jpg",
     googleMaps: "https://maps.app.goo.gl/BSQf777DAMgTwg5w7",
     mapsIframe:
@@ -329,6 +343,7 @@ export const dataBase = [
     location: "Intramuros",
     locType: "Study Cafe",
     star: 3.7,
+    availableSeats: 17,
     image: "/images/21.jpg",
     googleMaps: "https://maps.app.goo.gl/16uqv1LFEaAVdRHVA",
     mapsIframe:
@@ -345,6 +360,7 @@ export const dataBase = [
     location: "Intramuros",
     locType: "Study Cafe",
     star: 4.5,
+    availableSeats: 11,
     image: "/images/22.jpg",
     googleMaps: "https://maps.app.goo.gl/tf2X8JbyzdqgwYL97",
     mapsIframe:
@@ -366,6 +382,7 @@ export const dataBase = [
     location: "Intramuros",
     locType: "Co-Working",
     star: 4.9,
+    availableSeats: 18,
     image: "/images/23.jpg",
     googleMaps: "https://maps.app.goo.gl/qjUWFTt17bu3eyc3A",
     mapsIframe:
@@ -382,6 +399,7 @@ export const dataBase = [
     location: "Quiapo",
     locType: "Co-Working",
     star: 4.6,
+    availableSeats: 10,
     image: "/images/24.jpg",
     googleMaps: "https://maps.app.goo.gl/q9n8NpRpvd3s3do77",
     mapsIframe:
@@ -397,6 +415,7 @@ export const dataBase = [
     location: "Quiapo",
     locType: "Co-Working",
     star: 4.3,
+    availableSeats: 21,
     image: "/images/25.jpg",
     googleMaps: "https://maps.app.goo.gl/VMp78YtsiUVs5mck6",
     mapsIframe:
@@ -412,6 +431,7 @@ export const dataBase = [
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.6,
+    availableSeats: 25,
     image: "/images/26.jpg",
     googleMaps: "https://maps.app.goo.gl/fD5DAMBLX2LTuMFW7",
     mapsIframe:
@@ -427,6 +447,7 @@ export const dataBase = [
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.1,
+    availableSeats: 19,
     image: "/images/27.jpg",
     googleMaps: "https://maps.app.goo.gl/mdg61m68dyuGiB329",
     mapsIframe:
@@ -442,6 +463,7 @@ export const dataBase = [
     location: "Quiapo",
     locType: "Study Cafe",
     star: 4.3,
+    availableSeats: 4,
     image: "/images/28.jpg",
     googleMaps: "https://maps.app.goo.gl/nrHw3cVMmKzVkCgZA",
     mapsIframe:
@@ -457,6 +479,7 @@ export const dataBase = [
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 4.9,
+    availableSeats: 11,
     image: "/images/29.jpg",
     googleMaps: "https://maps.app.goo.gl/wAzSPscwXPA8XNbv8",
     mapsIframe:
@@ -472,6 +495,7 @@ export const dataBase = [
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 4.6,
+    availableSeats: 20,
     image: "/images/30.jpg",
     googleMaps: "https://maps.app.goo.gl/syPwFc9JQJy2kVMo7",
     mapsIframe:
@@ -487,6 +511,7 @@ export const dataBase = [
     location: "Santa Cruz",
     locType: "Study Cafe",
     star: 5.0,
+    availableSeats: 22,
     image: "/images/31.jpg",
     googleMaps: "https://maps.app.goo.gl/6wkC2NCcJnrDzMxf9",
     mapsIframe:
@@ -502,6 +527,7 @@ export const dataBase = [
     location: "Santa Mesa",
     locType: "Co-Working",
     star: 4.9,
+    availableSeats: 13,
     image: "/images/34.jpg",
     googleMaps: "https://maps.app.goo.gl/GjR6ydTm7v3cbfjZA",
     mapsIframe:
@@ -517,6 +543,7 @@ export const dataBase = [
     location: "Santa Mesa",
     locType: "Co-Working",
     star: 4.9,
+    availableSeats: 7,
     image: "/images/35.jpg",
     googleMaps: "https://maps.app.goo.gl/3QSXBazWtrnohwRN6",
     mapsIframe:
@@ -532,6 +559,7 @@ export const dataBase = [
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.7,
+    availableSeats: 2,
     image: "/images/36.jpg",
     googleMaps: "https://maps.app.goo.gl/SfN4RQLmyZydXrAx8",
     mapsIframe:
@@ -547,6 +575,7 @@ export const dataBase = [
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.7,
+    availableSeats: 9,
     image: "/images/37.jpg",
     googleMaps: "https://maps.app.goo.gl/TWDAFHRagGdvhbuQ7",
     mapsIframe:
@@ -562,6 +591,7 @@ export const dataBase = [
     location: "Santa Mesa",
     locType: "Study Cafe",
     star: 4.2,
+    availableSeats: 18,
     image: "/images/38.jpg",
     googleMaps: "https://maps.app.goo.gl/8CVtTz3RjLf573s16",
     mapsIframe:
@@ -577,6 +607,7 @@ export const dataBase = [
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.8,
+    availableSeats: 20,
     image: "/images/39.jpg",
     googleMaps: "https://maps.app.goo.gl/dkLQqqTKoDWeAyy37",
     mapsIframe:
@@ -592,6 +623,7 @@ export const dataBase = [
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.8,
+    availableSeats: 18,
     image: "/images/40.jpg",
     googleMaps: "https://maps.app.goo.gl/yrYoE3mC17H6GsmJ7",
     mapsIframe:
@@ -606,6 +638,7 @@ export const dataBase = [
     location: "San Miguel",
     locType: "Study Cafe",
     star: 4.2,
+    availableSeats: 2,
     image: "/images/41.jpg",
     googleMaps: "https://maps.app.goo.gl/QPGhBf8xaf5uzXXi6",
     mapsIframe:
