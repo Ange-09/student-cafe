@@ -1,20 +1,25 @@
 .ownerpagesection {
   display: grid;
   grid-template-areas:
+    "hdr"
     "row-one"
     "row-two"
     "row-three";
 
-  grid-template-rows: 25vh 75vh auto; /* row 1 + row 2 = 100vh */
+  grid-template-rows: 80px 25vh 75vh auto; /* row 1 + row 2 = 100vh */
 
-  background-color: rgb(255, 255, 255);
+  background-color: #fff7ee;
   min-height: 140vh;
+}
+
+.ops-header {
+  grid-area: hdr;
+  height: 80px;
+  background-color: black;
 }
 
 .ops-row-one {
   grid-area: row-one;
-  margin-top: 80px;
-
   text-align: center;
   font-size: 50px;
   font-weight: 700;

@@ -9,6 +9,7 @@ import CommentsHistory from "../components/CommentsHistory";
 function OwnerPageSection() {
   return (
     <div className="ownerpagesection">
+      <div className="ops-header"></div>
       <div className="ops-row-one">CloudSpace Study Hub</div>
       <div className="ops-row-two">
         <div className="linegraph">
