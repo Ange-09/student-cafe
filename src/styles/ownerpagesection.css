@@ -6,7 +6,7 @@
     "row-two"
     "row-three";
 
-  grid-template-rows: 80px 25vh 75vh auto; /* row 1 + row 2 = 100vh */
+  grid-template-rows: 80px 20vh 75vh auto; /* row 1 + row 2 = 100vh */
 
   background-color: #fff7ee;
   min-height: 140vh;
@@ -14,8 +14,8 @@
 
 .ops-header {
   grid-area: hdr;
-  height: 80px;
-  background-color: black;
+  height: 60px;
+  background-color: #723002;
 }
 
 .ops-row-one {
@@ -24,15 +24,22 @@
   font-size: 50px;
   font-weight: 700;
   color: #5d4e37;
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
   padding: 30px 40px;
   border-bottom: 3px solid #d4a574;
+  border-top: 3px solid #d4a574;
 }
 
 .ops-row-two {
   grid-area: row-two;
   padding: 0px 10px;
+  margin-top: 50px;
 
   display: flex;
   flex-direction: row;
