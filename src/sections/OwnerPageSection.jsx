@@ -3,6 +3,8 @@ import "../styles/ownerpagesection.css";
 import CafeCustomerChart from "../components/CafeCustomerChart";
 import StatsDisplay from "../components/StatsDisplay";
 import CustomerReviewSummary from "../components/CustomerReviewSummary";
+import CustomerHistory from "../components/CustomerHistory";
+import CommentsHistory from "../components/CommentsHistory";
 
 function OwnerPageSection() {
   return (
@@ -20,9 +22,12 @@ function OwnerPageSection() {
         </div>
       </div>
       <div className="ops-row-three">
-        <div className="seat-adjustment"></div>
-        <div className="table-history"></div>
-        <div className="comments-history"></div>
+        <div className="table-history">
+          <CustomerHistory />
+        </div>
+        <div className="comments-history">
+          <CommentsHistory />
+        </div>
       </div>
     </div>
   );
