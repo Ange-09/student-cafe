@@ -2,10 +2,11 @@
   display: flex;
   position: relative;
   width: 100vw;
-  height: 100vh;
-  flex-direction: column;
+  height: 30vh;
+  padding: 40px;
+  flex-direction: row;
 
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 
@@ -17,17 +18,15 @@
 }
 
 .hero-title {
-  margin-top: 4rem;
   font-size: 4rem;
   font-weight: 700;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
 .hero-description {
-  margin-top: 3rem;
   font-size: 2rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
-  margin-bottom: 100px;
+  text-align: right;
 }
 
 .search-title {
