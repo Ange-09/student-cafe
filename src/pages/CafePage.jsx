@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { dataBase } from "../context/DataBase";
 import CafePageSection from "../sections/CafePageSection";
 import ChatWidget from "../components/ChatWidget";
+import Footer from "../components/Footer";
 
 function CafePage() {
   const { id } = useParams(); // Get cafe ID from URL
@@ -32,6 +33,7 @@ function CafePage() {
       {/* Cafe details section */}
       <CafePageSection cafe={selectedCafe} />
       <ChatWidget />
+      <Footer />
     </div>
   );
 }

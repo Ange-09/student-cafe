@@ -3,10 +3,10 @@ import "../styles/customerhistory.css";
 
 const CustomerHistory = () => {
   // Sample data for customer history
-  const [customers] = useState([
+  const [customers, setCustomers] = useState([
     {
       id: 1,
-      date: "2024-11-28",
+      date: "2025-11-28",
       name: "Sarah Johnson",
       time: "09:30 AM",
       amount: 250.0,
@@ -15,7 +15,7 @@ const CustomerHistory = () => {
     },
     {
       id: 2,
-      date: "2024-11-28",
+      date: "2025-11-28",
       name: "Michael Chen",
       time: "10:15 AM",
       amount: 180.5,
@@ -24,7 +24,7 @@ const CustomerHistory = () => {
     },
     {
       id: 3,
-      date: "2024-11-28",
+      date: "2025-11-28",
       name: "Emma Rodriguez",
       time: "11:00 AM",
       amount: 320.75,
@@ -33,7 +33,7 @@ const CustomerHistory = () => {
     },
     {
       id: 4,
-      date: "2024-11-28",
+      date: "2025-11-28",
       name: "David Kim",
       time: "02:30 PM",
       amount: 0.0,
@@ -42,7 +42,7 @@ const CustomerHistory = () => {
     },
     {
       id: 5,
-      date: "2024-11-27",
+      date: "2025-11-27",
       name: "Olivia Martinez",
       time: "08:45 AM",
       amount: 450.0,
@@ -51,7 +51,7 @@ const CustomerHistory = () => {
     },
     {
       id: 6,
-      date: "2024-11-27",
+      date: "2025-11-27",
       name: "James Wilson",
       time: "01:20 PM",
       amount: 295.25,
@@ -60,7 +60,7 @@ const CustomerHistory = () => {
     },
     {
       id: 7,
-      date: "2024-11-27",
+      date: "2025-11-27",
       name: "Sophia Lee",
       time: "03:00 PM",
       amount: 175.0,
@@ -69,7 +69,7 @@ const CustomerHistory = () => {
     },
     {
       id: 8,
-      date: "2024-11-26",
+      date: "2025-11-26",
       name: "Daniel Brown",
       time: "10:30 AM",
       amount: 380.5,
@@ -78,7 +78,7 @@ const CustomerHistory = () => {
     },
     {
       id: 9,
-      date: "2024-11-26",
+      date: "2025-11-26",
       name: "Ava Garcia",
       time: "12:15 PM",
       amount: 220.0,
@@ -87,7 +87,7 @@ const CustomerHistory = () => {
     },
     {
       id: 10,
-      date: "2024-11-26",
+      date: "2025-11-26",
       name: "Ethan Taylor",
       time: "04:45 PM",
       amount: 150.75,
@@ -95,6 +95,18 @@ const CustomerHistory = () => {
       status: "Checked Out",
     },
   ]);
+
+  const statusOptions = ["Reserved", "Checked In", "Checked Out"];
+
+  const handleStatusChange = (customerId, newStatus) => {
+    setCustomers((prevCustomers) =>
+      prevCustomers.map((customer) =>
+        customer.id === customerId
+          ? { ...customer, status: newStatus }
+          : customer
+      )
+    );
+  };
 
   const getStatusClass = (status) => {
     switch (status) {
@@ -166,13 +178,21 @@ const CustomerHistory = () => {
                   {renderStars(customer.rating)}
                 </td>
                 <td className="ch-status-cell">
-                  <span
-                    className={`ch-status-badge ${getStatusClass(
+                  <select
+                    className={`ch-status-select ${getStatusClass(
                       customer.status
                     )}`}
+                    value={customer.status}
+                    onChange={(e) =>
+                      handleStatusChange(customer.id, e.target.value)
+                    }
                   >
-                    {customer.status}
-                  </span>
+                    {statusOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
                 </td>
               </tr>
             ))}

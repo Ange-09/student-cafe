@@ -7,7 +7,7 @@ const CommentsHistory = () => {
     {
       id: 1,
       customerName: "Sarah Johnson",
-      date: "2024-11-28",
+      date: "2025-11-28",
       time: "09:45 AM",
       rating: 5,
       comment:
@@ -16,7 +16,7 @@ const CommentsHistory = () => {
     {
       id: 2,
       customerName: "Michael Chen",
-      date: "2024-11-28",
+      date: "2025-11-28",
       time: "10:30 AM",
       rating: 4,
       comment:
@@ -25,7 +25,7 @@ const CommentsHistory = () => {
     {
       id: 3,
       customerName: "Emma Rodriguez",
-      date: "2024-11-28",
+      date: "2025-11-28",
       time: "11:15 AM",
       rating: 5,
       comment:
@@ -34,7 +34,7 @@ const CommentsHistory = () => {
     {
       id: 4,
       customerName: "David Kim",
-      date: "2024-11-27",
+      date: "2025-11-27",
       time: "02:45 PM",
       rating: 3,
       comment: "Good location but can get a bit noisy during peak hours.",
@@ -42,7 +42,7 @@ const CommentsHistory = () => {
     {
       id: 5,
       customerName: "Olivia Martinez",
-      date: "2024-11-27",
+      date: "2025-11-27",
       time: "09:00 AM",
       rating: 5,
       comment:
@@ -51,7 +51,7 @@ const CommentsHistory = () => {
     {
       id: 6,
       customerName: "James Wilson",
-      date: "2024-11-27",
+      date: "2025-11-27",
       time: "01:35 PM",
       rating: 4,
       comment:
@@ -60,7 +60,7 @@ const CommentsHistory = () => {
     {
       id: 7,
       customerName: "Sophia Lee",
-      date: "2024-11-26",
+      date: "2025-11-26",
       time: "03:15 PM",
       rating: 4,
       comment:
@@ -69,7 +69,7 @@ const CommentsHistory = () => {
     {
       id: 8,
       customerName: "Daniel Brown",
-      date: "2024-11-26",
+      date: "2025-11-26",
       time: "10:45 AM",
       rating: 5,
       comment:

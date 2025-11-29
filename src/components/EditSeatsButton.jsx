@@ -1,14 +1,16 @@
 // EditSeatsButton.jsx
 import React, { useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { Edit3, Plus, Minus, Check, X } from "lucide-react";
+import { Edit3, Plus, Minus, Check, X, Upload, Camera } from "lucide-react";
 import "../styles/editseatsbutton.css";
 
 const EditSeatsButton = () => {
   const { cafes, updateSeats } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState(1); // 1: edit, 2: confirm, 3: success
+  const [step, setStep] = useState(1); // 1: edit, 2: confirm, 3: picture, 4: success
   const [newSeats, setNewSeats] = useState(0);
+  const [evidenceImage, setEvidenceImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
 
   // Get the cafe with id 1
   const targetCafe = cafes.find((cafe) => cafe.id === 1);
@@ -40,6 +42,8 @@ const EditSeatsButton = () => {
     setIsOpen(false);
     setStep(1);
     setNewSeats(0);
+    setEvidenceImage(null);
+    setImagePreview(null);
   };
 
   const handleIncrement = () => {
@@ -55,14 +59,40 @@ const EditSeatsButton = () => {
   };
 
   const handleConfirm = () => {
-    if (targetCafe) {
+    setStep(3);
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setEvidenceImage(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setEvidenceImage(null);
+    setImagePreview(null);
+  };
+
+  const handleSubmit = () => {
+    if (targetCafe && evidenceImage) {
       updateSeats(1, newSeats);
-      setStep(3);
+      // Here you could also save the evidence image if needed
+      setStep(4);
     }
   };
 
   const handleBack = () => {
-    setStep(1);
+    if (step === 3) {
+      setStep(2);
+    } else {
+      setStep(1);
+    }
   };
 
   const handleSuccess = () => {
@@ -190,14 +220,84 @@ const EditSeatsButton = () => {
                   Back
                 </button>
                 <button onClick={handleConfirm} className="confirm-button">
-                  Confirm
+                  Next
                 </button>
               </div>
             </div>
           )}
 
-          {/* Step 3: Success */}
+          {/* Step 3: Add Picture */}
           {step === 3 && (
+            <div className="modal-body">
+              <div className="modal-header">
+                <h2 className="modal-title">Add Evidence Photo</h2>
+                <button onClick={handleClose} className="close-button">
+                  <X size={24} />
+                </button>
+              </div>
+
+              <p className="evidence-instruction">
+                Please upload a photo as evidence of the seat availability
+                changes.
+              </p>
+
+              <div className="upload-section">
+                {!imagePreview ? (
+                  <label htmlFor="file-upload" className="upload-area">
+                    <input
+                      id="file-upload"
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                      className="file-input"
+                    />
+                    <div className="upload-icon">
+                      <Camera size={48} />
+                    </div>
+                    <div className="upload-text">
+                      <span className="upload-title">
+                        Click to upload photo
+                      </span>
+                      <span className="upload-subtitle">or drag and drop</span>
+                    </div>
+                    <div className="upload-formats">
+                      PNG, JPG, JPEG up to 10MB
+                    </div>
+                  </label>
+                ) : (
+                  <div className="image-preview-container">
+                    <img
+                      src={imagePreview}
+                      alt="Evidence"
+                      className="image-preview"
+                    />
+                    <button
+                      onClick={handleRemoveImage}
+                      className="remove-image-button"
+                    >
+                      <X size={20} />
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              <div className="button-group">
+                <button onClick={handleBack} className="secondary-button">
+                  Back
+                </button>
+                <button
+                  onClick={handleSubmit}
+                  className="confirm-button"
+                  disabled={!evidenceImage}
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Step 4: Success */}
+          {step === 4 && (
             <div className="modal-body success-body">
               <div className="success-icon">
                 <Check size={48} />
@@ -207,6 +307,9 @@ const EditSeatsButton = () => {
                 Available seats for{" "}
                 <span className="highlight">{targetCafe.name}</span> have been
                 updated to <span className="highlight-seats">{newSeats}</span>.
+              </p>
+              <p className="success-message-sub">
+                Evidence photo has been uploaded successfully.
               </p>
 
               <button onClick={handleSuccess} className="primary-button">

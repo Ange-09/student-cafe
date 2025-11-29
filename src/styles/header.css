@@ -16,6 +16,12 @@
 
 /* HEADER TEXT STYLES */
 
+.header-logo {
+  height: 40px; /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
 .header-title {
   color: #ffffff;
   font-size: 1.1rem;
@@ -27,20 +33,24 @@
 }
 
 .header-line {
-  color: #1a8ccc;
+  color: #fbbf24;
   font-weight: 500;
 }
 
 /* NAV LINK STYLES */
 
 .navlink {
-  color: #b3b2b2;
+  color: #d1d5db;
   text-decoration: none;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #fbbf24;
 }
 
 .navlink::after {
@@ -50,7 +60,7 @@
   left: 50%;
   width: 115%;
   height: 0.14rem;
-  background: linear-gradient(90deg, #3abeff, #1a8ccc);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
   border-radius: 2px;
   transform: scaleX(0) translateX(-50%);
   transform-origin: center center;
@@ -61,6 +71,10 @@
 .navlink.active::after {
   transform: scaleX(1) translateX(-50%);
   transform-origin: bottom left;
+}
+
+.navlink.active {
+  color: #fbbf24;
 }
 
 /* MENU ICON STYLES */

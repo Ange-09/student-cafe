@@ -6,7 +6,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #d97706;
   border: none;
   color: white;
   cursor: pointer;
@@ -75,7 +75,7 @@
 
 /* Chat Header */
 .chat-header-inbox {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #d97706;
   color: white;
   padding: 16px 20px;
   display: flex;
@@ -181,7 +181,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #d97706;
   color: white;
   display: flex;
   align-items: center;
@@ -287,7 +287,7 @@
 }
 
 .message-owner .message-content-inbox {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #d97706;
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -319,14 +319,14 @@
 }
 
 .chat-input-inbox:focus {
-  border-color: #667eea;
+  background-color: #d97706;
 }
 
 .send-button-inbox {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #d97706;
   border: none;
   color: white;
   cursor: pointer;
