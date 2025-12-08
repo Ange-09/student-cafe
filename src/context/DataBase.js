@@ -20,6 +20,8 @@ export const dataBase = [
       "Food Options Available",
       "Printing Services",
       "Parking Space",
+      "Charging Stations",
+      "Cool & Light Environment",
     ],
   },
   {
@@ -36,7 +38,12 @@ export const dataBase = [
     operatingHours: "8am - 12am",
     peakTime: "6pm - 9pm",
     price: 150,
-    amenities: ["Free Wifi", "Food Options Available", "Parking Space"],
+    amenities: [
+      "Free Wifi",
+      "Food Options Available",
+      "Parking Space",
+      "Comfortable Seating",
+    ],
   },
   {
     id: 3,
@@ -107,7 +114,13 @@ export const dataBase = [
     operatingHours: "24/7",
     peakTime: "",
     price: 300,
-    amenities: ["Free Wifi", "Conference Rooms", "Open 24/7"],
+    amenities: [
+      "Free Wifi",
+      "Conference Rooms",
+      "Open 24/7",
+      "Charging Stations",
+      "Cool & Light Environment",
+    ],
   },
   {
     id: 7,
@@ -124,7 +137,7 @@ export const dataBase = [
     operatingHours: "9am - 6pm",
     peakTime: "4pm - 6pm",
     price: 300,
-    amenities: ["Free Wifi", "Conference Rooms"],
+    amenities: ["Free Wifi", "Conference Rooms", "Charging Stations"],
   },
   {
     id: 8,
@@ -176,7 +189,12 @@ export const dataBase = [
     operatingHours: "8am - 8:30pm",
     peakTime: "3pm - 6pm",
     price: 100,
-    amenities: ["Free Wifi", "Food Options Available"],
+    amenities: [
+      "Free Wifi",
+      "Food Options Available",
+      "Comfortable Seating",
+      "Cool & Light Environment",
+    ],
   },
   {
     id: 11,
@@ -193,7 +211,12 @@ export const dataBase = [
     operatingHours: "8am - 8pm",
     peakTime: "5pm - 8pm",
     price: 100,
-    amenities: ["Free Wifi", "Quiet Zones", "Printing Services"],
+    amenities: [
+      "Free Wifi",
+      "Quiet Zones",
+      "Printing Services",
+      "Cool & Light Environment",
+    ],
   },
   {
     id: 12,
@@ -209,7 +232,12 @@ export const dataBase = [
 
     operatingHours: "24/7",
     price: 100,
-    amenities: ["Free Wifi", "Conference Rooms"],
+    amenities: [
+      "Free Wifi",
+      "Conference Rooms",
+      "Cool & Light Environment",
+      "Comfortable Seating",
+    ],
   },
   {
     id: 13,
@@ -246,6 +274,7 @@ export const dataBase = [
       "Free Coffee",
       "Open 24/7",
       "Food Options Available",
+      "Charging Stations",
     ],
   },
   {
@@ -268,6 +297,7 @@ export const dataBase = [
       "Food Options Available",
       "Quiet Zones",
       "Open 24/7",
+      "Charging Stations",
     ],
   },
   {
@@ -374,6 +404,8 @@ export const dataBase = [
       "Free Coffee",
       "Quiet Zones",
       "Food Options Available",
+      "Cool & Light Environment",
+      ,
     ],
   },
   {
@@ -551,7 +583,7 @@ export const dataBase = [
 
     operatingHours: "8am - 8pm",
     price: 150,
-    amenities: ["Free Wifi", "Quiet Zones"],
+    amenities: ["Free Wifi", "Quiet Zones", "Cool & Light Environment"],
   },
   {
     id: 33,
@@ -567,7 +599,7 @@ export const dataBase = [
 
     operatingHours: "7am - 11pm",
     price: 100,
-    amenities: ["Free Wifi", "Air Conditioning"],
+    amenities: ["Free Wifi", "Air Conditioning", "Cool & Light Environment"],
   },
   {
     id: 34,
@@ -583,7 +615,7 @@ export const dataBase = [
 
     operatingHours: "9am - 9pm",
     price: 200,
-    amenities: ["Free Wifi", "Cozy Ambiance"],
+    amenities: ["Free Wifi", "Cozy Ambiance", "Charging Stations"],
   },
   {
     id: 35,
@@ -630,7 +662,7 @@ export const dataBase = [
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.80363636048!2d120.9533938!3d14.6147095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90046b51bb1%3A0x73ce109f24486c61!2sCram%20Coffee!5e0!3m2!1sen!2sph!4v1763447205297!5m2!1sen!2sph",
     operatingHours: "9am - 9pm",
     price: 200,
-    amenities: ["Free Wifi", "Group Seating"],
+    amenities: ["Free Wifi", "Group Seating", "Charging Stations"],
   },
   {
     id: 38,
@@ -645,6 +677,11 @@ export const dataBase = [
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30885.80363636048!2d120.9533938!3d14.6147095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9c08c3201a7%3A0xde5a8534332c7fab!2sPresko%20Coffee%20Manila!5e0!3m2!1sen!2sph!4v1763447228779!5m2!1sen!2sph",
     operatingHours: "7am - 11pm",
     price: 200,
-    amenities: ["Free Wifi", "Outdoor Seating"],
+    amenities: [
+      "Free Wifi",
+      "Outdoor Seating",
+      "Comfortable Seating",
+      "Cool & Light Environment",
+    ],
   },
 ];

@@ -16,6 +16,9 @@ const AmenitiesFilter = () => {
     "Parking Space",
     "Printing Services",
     "Open 24/7",
+    "Charging Stations",
+    "Comfortable Seating",
+    "Cool & Light Environment",
   ];
 
   // Amenity icons mapping
@@ -157,6 +160,66 @@ const AmenitiesFilter = () => {
       >
         <circle cx="12" cy="12" r="10"></circle>
         <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+    ),
+    "Charging Stations": (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1"></path>
+        <polyline points="11 7 13 7 13 3 11 3 11 7"></polyline>
+        <rect x="7" y="11" width="10" height="8" rx="1"></rect>
+        <line x1="20" y1="11" x2="22" y2="11"></line>
+        <line x1="20" y1="15" x2="22" y2="15"></line>
+      </svg>
+    ),
+    "Comfortable Seating": (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path>
+        <path d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"></path>
+        <path d="M5 18v3"></path>
+        <path d="M19 18v3"></path>
+      </svg>
+    ),
+    "Cool & Light Environment": (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
       </svg>
     ),
   };

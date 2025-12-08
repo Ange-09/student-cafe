@@ -18,6 +18,9 @@ export const amenities = [
   "Parking Space",
   "Printing Services",
   "Open 24/7",
+  "Charging Stations",
+  "Comfortable Seating",
+  "Cool & Light Environment",
 ];
 
 export const CafeName = [
