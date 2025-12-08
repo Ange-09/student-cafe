@@ -10,7 +10,7 @@ function Header() {
     <div className="header">
       <p className="header-title">
         <span className="header-full-text">
-          <span className="header-line"> | </span>Study Spot
+          <span className="header-line"> | </span>
         </span>
       </p>
 
