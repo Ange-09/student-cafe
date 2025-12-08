@@ -22,6 +22,7 @@ export const dataBase = [
       "Parking Space",
       "Charging Stations",
       "Cool & Light Environment",
+      "Comfortable Seating",
     ],
   },
   {
@@ -365,7 +366,11 @@ export const dataBase = [
     operatingHours: "10:30am - 8pm",
     peakTime: "6pm - 7pm",
     price: 200,
-    amenities: ["Free Wifi", "Food Options Available"],
+    amenities: [
+      "Free Wifi",
+      "Food Options Available",
+      "Cool & Light Environment",
+    ],
   },
   {
     id: 20,
