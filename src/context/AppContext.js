@@ -17,7 +17,7 @@ export const AppProvider = ({ children }) => {
   // --- NEW: cafes state (load from localStorage first if present) ---
   const [cafes, setCafes] = useState(() => {
     try {
-      const raw = localStorage.getItem("cafes_v1");
+      const raw = localStorage.getItem("cafes_v2");
       return raw ? JSON.parse(raw) : dataBase;
     } catch {
       return dataBase;
@@ -27,7 +27,7 @@ export const AppProvider = ({ children }) => {
   // Persist cafes on change
   useEffect(() => {
     try {
-      localStorage.setItem("cafes_v1", JSON.stringify(cafes));
+      localStorage.setItem("cafes_v2", JSON.stringify(cafes));
     } catch {}
   }, [cafes]);
 
